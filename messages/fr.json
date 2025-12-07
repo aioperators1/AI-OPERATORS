@@ -1,0 +1,111 @@
+{
+    "Navbar": {
+        "home": "Accueil",
+        "solutions": "Solutions",
+        "portfolio": "Portfolio",
+        "about": "À propos",
+        "contact": "Contact",
+        "bookDemo": "Réserver une démo"
+    },
+    "Hero": {
+        "badge": "AI Solution 2.0 Maintenant Disponible",
+        "titleStart": "Automatisez",
+        "titleMiddle": "Toute Votre",
+        "titleEnd": "Entreprise",
+        "description": "Nous sommes AI Solution - Votre partenaire de confiance en automatisation intelligente. Notre produit phare, Qunvert, transforme WhatsApp en un outil commercial puissant alimenté par l'IA. Automatisez les conversations, boostez l'engagement et évoluez sans effort avec notre technologie de pointe.",
+        "ctaPrimary": "Commencer Gratuitement",
+        "ctaSecondary": "Explorer les Cas d'Usage"
+    },
+    "Features": {
+        "headerTitle": "Conçu pour l'Entreprise Moderne",
+        "headerSubtitle": "Des fonctionnalités puissantes pour un avantage concurrentiel décisif.",
+        "aiTitle": "Intelligence Artificielle Avancée",
+        "aiDesc": "Nos agents ne suivent pas de simples scripts. Ils comprennent le contexte, l'intention et le sentiment pour des interactions humaines qui convertissent.",
+        "whatsappTitle": "Intégration WhatsApp Native",
+        "whatsappDesc": "Intégré directement à l'application de messagerie la plus populaire au monde. Aucune installation requise pour vos clients.",
+        "availabilityTitle": "Disponibilité 24/7",
+        "availabilityDesc": "Ne manquez jamais une opportunité. Votre agent répond instantanément à chaque demande, jour et nuit, quel que soit le fuseau horaire.",
+        "securityTitle": "Sécurité de Niveau Entreprise",
+        "securityDesc": "Vos données vous appartiennent. Nous mettons en œuvre un chiffrement de bout en bout et des protocoles de confidentialité stricts."
+    },
+    "Process": {
+        "badge": "Notre Méthodologie",
+        "title": "Du Concept à la Conversion",
+        "subtitle": "Une méthodologie rigoureuse et éprouvée pour transformer vos opérations commerciales.",
+        "step1Title": "Découverte & Stratégie",
+        "step1Desc": "Nous analysons vos flux de travail pour identifier les opportunités d'automatisation à forte valeur ajoutée.",
+        "step2Title": "Ingénierie Sur Mesure",
+        "step2Desc": "Nos développeurs construisent votre agent IA, entraîné spécifiquement sur vos données et votre voix de marque.",
+        "step3Title": "Déploiement Transparent",
+        "step3Desc": "Intégration directe avec vos outils existants (WhatsApp, CRM, Site Web) sans aucune interruption de service.",
+        "step4Title": "Optimisation & Échelle",
+        "step4Desc": "Surveillance continue et ajustements pour garantir que votre IA devient plus intelligente à chaque interaction."
+    },
+    "Partners": {
+        "trustedBy": "La confiance d'entreprises visionnaires"
+    },
+    "CTA": {
+        "title": "Prêt à automatiser votre croissance ?",
+        "subtitle": "Rejoignez les entreprises qui évoluent déjà avec AI Solution. Configuration en moins de 24 heures.",
+        "primary": "Commencer Maintenant",
+        "secondary": "Discuter avec l'Agent Démo"
+    },
+    "Footer": {
+        "tagline": "Nous construisons l'infrastructure intelligente qui propulse les entreprises modernes. Ventes, support et opérations — entièrement automatisés.",
+        "services": "Services",
+        "company": "Entreprise",
+        "connect": "Connexion",
+        "subscribe": "Restez Informé",
+        "subscribeDesc": "Recevez les dernières tendances IA et stratégies d'automatisation directement dans votre boîte de réception.",
+        "rights": "Tous droits réservés."
+    },
+    "Contact": {
+        "title": "Parlons-en.",
+        "subtitle": "Vous avez un projet en tête ? Nous adorerions en savoir plus.",
+        "detailsTitle": "Coordonnées",
+        "socialsTitle": "Réseaux Sociaux",
+        "formSuccessTitle": "Message Envoyé !",
+        "formSuccessMessage": "Merci de nous avoir contactés. Nous avons bien reçu votre message et reviendrons vers vous rapidement à",
+        "sendAnother": "Envoyer un autre message",
+        "labelName": "Votre Nom",
+        "placeholderName": "Jean Dupont",
+        "labelEmail": "Adresse Email",
+        "placeholderEmail": "jean@exemple.com",
+        "labelMessage": "Parlez-nous de votre projet",
+        "placeholderMessage": "Nous avons besoin d'un agent IA qui...",
+        "buttonSend": "Envoyer le Message",
+        "buttonSending": "Envoi...",
+        "buttonWhatsApp": "Ou discuter sur WhatsApp",
+        "availableNow": "Disponible Maintenant",
+        "errorName": "Le nom est requis",
+        "errorEmail": "L'email est requis",
+        "errorEmailValid": "Veuillez entrer un email valide",
+        "errorMessage": "Le message est requis",
+        "errorGeneric": "Une erreur s'est produite. Veuillez réessayer ou nous envoyer un email directement."
+    },
+    "ROI": {
+        "badge": "Économies",
+        "title": "Calculez Votre ROI",
+        "subtitle": "Découvrez combien vous pouvez économiser en automatisant vos opérations de support client.",
+        "labelTickets": "Tickets Mensuels",
+        "labelCost": "Coût Moyen par Ticket (€)",
+        "labelAutomation": "Taux d'Automatisation Cible (%)",
+        "resultTitle": "Économies Annuelles Estimées",
+        "cta": "Commencez à Économiser"
+    },
+    "Assistant": {
+        "greeting": "Bonjour ! 👋 Bienvenue chez AI Solution.",
+        "help": "Je suis votre assistant virtuel intelligent. Je connais tout sur nos services, prix et technologies. Comment puis-je vous aider ?",
+        "option1": "Nos Services",
+        "option2": "Prix & ROI",
+        "option3": "Tech Stack",
+        "option4": "Réserver une Démo",
+        "replyServices": "Nous sommes experts en trois domaines : \n1. **Agents IA :** Bots sur mesure pour le support et les ventes.\n2. **Automation WhatsApp :** Intégration complète avec l'API Business.\n3. **Automatisation de Workflow :** Optimisation des processus avec n8n et LLMs.",
+        "replyCost": "Nous proposons une tarification flexible, du 'Starter' à l'Entreprise. Nos solutions réduisent généralement les coûts opérationnels de 30 à 50% en 3 mois. Souhaitez-vous un devis ?",
+        "replyTech": "Nous utilisons le meilleur de la tech : Next.js 14, React, Tailwind CSS, et Python/Node.js. Nous exploitons la puissance de GPT-4, Claude 3 et modèles Open Source.",
+        "replyDemo": "Excellent choix ! Vous pouvez planifier un appel stratégique de 30 minutes avec notre équipe.",
+        "replyDefault": "C'est une excellente question. Pour vous donner une réponse précise, je vais transmettre votre demande à nos experts humains qui vous répondront par email.",
+        "placeholder": "Posez-moi une question...",
+        "send": "Envoyer"
+    }
+}

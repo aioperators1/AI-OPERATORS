@@ -1,0 +1,238 @@
+{
+    "Navbar": {
+        "home": "Home",
+        "solutions": "Solutions",
+        "portfolio": "Portfolio",
+        "about": "About",
+        "contact": "Contact",
+        "bookDemo": "Book a Consultation",
+        "blog": "Blog"
+    },
+    "Hero": {
+        "badge": "Enterprise AI Solutions",
+        "titleStart": "We Build Advanced",
+        "titleMiddle": "AI Solutions",
+        "titleEnd": "For Modern Businesses",
+        "description": "Empowering Businesses Through AI. We build advanced AI solutions that transform operations, automate workflows, and drive growth for modern enterprises.",
+        "ctaPrimary": "Contact Us",
+        "ctaSecondary": "Our Solutions"
+    },
+    "Features": {
+        "headerTitle": "Enterprise AI Solutions",
+        "headerSubtitle": "Enterprise-grade AI solutions designed to transform your business operations and accelerate growth.",
+        "items": {
+            "agents": {
+                "title": "AI Agents & Automation",
+                "desc": "Autonomous AI agents that handle complex tasks, learn from interactions, and scale your operations 24/7."
+            },
+            "predictive": {
+                "title": "Predictive Intelligence",
+                "desc": "Machine learning models that forecast trends, anticipate customer behavior, and drive strategic decisions."
+            },
+            "workflow": {
+                "title": "Workflow Automation",
+                "desc": "Streamline business processes with intelligent automation that reduces costs and eliminates human error."
+            },
+            "chatbots": {
+                "title": "AI Chatbots",
+                "desc": "Conversational AI that engages customers, handles support, and generates leads around the clock."
+            },
+            "sales": {
+                "title": "Sales Automation",
+                "desc": "AI-powered sales tools that qualify leads, personalize outreach, and accelerate your revenue growth."
+            },
+            "custom": {
+                "title": "Custom AI Tools",
+                "desc": "Bespoke AI solutions tailored to your unique business challenges and competitive advantages."
+            },
+            "integration": {
+                "title": "CRM/ERP Integrations",
+                "desc": "Seamlessly connect AI capabilities with your existing systems for enhanced productivity."
+            },
+            "analytics": {
+                "title": "Data Analytics",
+                "desc": "Transform raw data into actionable insights with AI-driven dashboards and reporting."
+            }
+        }
+    },
+    "Industries": {
+        "title": "Industries We Serve",
+        "subtitle": "Specialized AI solutions tailored for diverse industries and their unique challenges.",
+        "items": {
+            "realestate": {
+                "title": "Real Estate",
+                "desc": "AI property valuation, lead scoring, and virtual tours."
+            },
+            "restaurants": {
+                "title": "Restaurants",
+                "desc": "Smart ordering, inventory management, and customer insights."
+            },
+            "logistics": {
+                "title": "Logistics",
+                "desc": "Route optimization, demand forecasting, and fleet management."
+            },
+            "retail": {
+                "title": "Retail",
+                "desc": "Personalized recommendations, inventory AI, and pricing optimization."
+            },
+            "finance": {
+                "title": "Finance",
+                "desc": "Fraud detection, risk assessment, and automated compliance."
+            },
+            "ecommerce": {
+                "title": "E-Commerce",
+                "desc": "AI search, dynamic pricing, and customer journey optimization."
+            }
+        }
+    },
+    "Process": {
+        "badge": "How We Work",
+        "title": "From Concept to Conversion",
+        "subtitle": "A rigorous, proven methodology to transform your business operations.",
+        "step1Title": "Discovery & Strategy",
+        "step1Desc": "We dive deep into your workflows to pinpoint high-value automation opportunities.",
+        "step2Title": "Custom Engineering",
+        "step2Desc": "Our developers build your bespoke AI agent, training it on your specific data and brand voice.",
+        "step3Title": "Seamless Deployment",
+        "step3Desc": "We integrate directly with your existing stack (WhatsApp, CRM, Website) with zero downtime.",
+        "step4Title": "Optimization & Scale",
+        "step4Desc": "Continuous monitoring and fine-tuning ensures your AI gets smarter with every interaction."
+    },
+    "Partners": {
+        "trustedBy": "Trusted Partners",
+        "trustedBySubtitle": "We collaborate with industry leaders to deliver exceptional AI solutions.",
+        "partnerTitle": "Ready to Partner with Us?",
+        "partnerSubtitle": "Join our growing network of enterprise clients leveraging AI to transform their businesses."
+    },
+    "CTA": {
+        "title": "Ready to transform your business?",
+        "subtitle": "Join the innovative companies already scaling with AI Solution Group. Contact us today.",
+        "primary": "Get Started Now",
+        "secondary": "View Solutions"
+    },
+    "Footer": {
+        "tagline": "AI Solution - Empowering Businesses Through AI. We build high-performance AI systems for companies worldwide.",
+        "services": "Services",
+        "company": "Company",
+        "connect": "Connect",
+        "subscribe": "Stay Updated",
+        "subscribeDesc": "Get the latest AI trends and automation strategies delivered to your inbox.",
+        "rights": "All rights reserved.",
+        "aiDev": "AI Development",
+        "workflow": "Workflow Automation",
+        "chatbot": "Chatbot Design",
+        "analytics": "Data Analytics",
+        "aboutUs": "About Us",
+        "careers": "Careers",
+        "blogLink": "Blog",
+        "contactLink": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "emailPlaceholder": "Enter your email"
+    },
+    "Contact": {
+        "title": "Let's talk.",
+        "subtitle": "Have a project in mind? We'd love to hear about it.",
+        "detailsTitle": "Contact Details",
+        "socialsTitle": "Socials",
+        "formSuccessTitle": "Message Sent!",
+        "formSuccessMessage": "Thanks for reaching out. We've received your message and will get back to you shortly at",
+        "sendAnother": "Send another message",
+        "labelName": "Your Name",
+        "placeholderName": "John Doe",
+        "labelEmail": "Email Address",
+        "placeholderEmail": "john@example.com",
+        "labelMessage": "Tell us about your project",
+        "placeholderMessage": "We need an AI agent that...",
+        "buttonSend": "Send Message",
+        "buttonSending": "Sending...",
+        "buttonWhatsApp": "Chat on WhatsApp",
+        "availableNow": "Available Now",
+        "errorName": "Name is required",
+        "errorEmail": "Email is required",
+        "errorEmailValid": "Please enter a valid email",
+        "errorMessage": "Message is required",
+        "errorGeneric": "Something went wrong. Please try again or email us directly."
+    },
+    "ROI": {
+        "badge": "Value",
+        "title": "Calculate Your ROI",
+        "subtitle": "See how much you can save by automating your operations with AI.",
+        "labelTickets": "Monthly Interactions",
+        "labelCost": "Cost per Interaction ($)",
+        "labelAutomation": "Target Automation Rate (%)",
+        "resultTitle": "Estimated Annual Savings",
+        "cta": "Start Saving Today"
+    },
+    "Assistant": {
+        "greeting": "Hi there! 👋 Welcome to AI Solution.",
+        "help": "I'm your intelligent virtual assistant. I can help you with understanding our AI solutions, pricing, or booking a consultation. How can I help?",
+        "option1": "Our Solutions",
+        "option2": "About Us",
+        "option3": "Industries",
+        "option4": "Book a Meeting",
+        "replyServices": "We offer a comprehensive suite of AI solutions:\n1. **AI Agents & Automation**\n2. **Predictive Intelligence**\n3. **Workflow Automation**\n4. **AI Chatbots**\n5. **Sales Automation**",
+        "replyCost": "We create tailored solutions based on your specific needs. Start with a consultation to get a custom quote and ROI analysis.",
+        "replyTech": "We utilize state-of-the-art AI technologies including custom LLMs, machine learning models, and secure enterprise integrations.",
+        "replyDemo": "Great! Let's schedule a time to discuss how we can transform your business. I'll open our calendar...",
+        "replyDefault": "That's an excellent question. While I'm an AI, I want to make sure you get the best advice. I'll have one of our senior strategy consultants reach out to you.",
+        "placeholder": "Ask about our AI services...",
+        "send": "Send"
+    },
+    "Stats": {
+        "activeUsers": "Projects Delivered",
+        "uptime": "Client Satisfaction",
+        "countries": "Countries",
+        "messagesDay": "AI Interactions"
+    },
+    "About": {
+        "badge": "Who We Are",
+        "titlePrefix": "About",
+        "titleSuffix": "AI Solution",
+        "subtitle": "We build high-performance AI systems for companies in Qatar, Morocco, and worldwide.",
+        "storyTitle": "Our Story",
+        "storyP1": "AI Solution builds high-performance AI systems for companies in Qatar, Morocco, and worldwide. We are a team of experienced engineers, data scientists, and business strategists dedicated to transforming how businesses operate through artificial intelligence.",
+        "storyP2": "Our mission is to make advanced AI technology accessible to businesses of all sizes, helping them compete in an increasingly digital world. From startups to enterprises, we deliver solutions that drive real results.",
+        "imageTitle": "AI SOLUTION",
+        "imageSubtitle": "Empowering Businesses",
+        "missionTitle": "Our Mission",
+        "missionDesc": "To empower every business with intelligent automation tools that drive growth and efficiency.",
+        "visionTitle": "Our Vision",
+        "visionDesc": "A future where businesses operate at peak efficiency through the power of ethical and advanced AI.",
+        "valuesTitle": "Why Choose Us",
+        "value1": "Fast Delivery",
+        "value2": "Tailored Engineering",
+        "value3": "Enterprise Quality",
+        "joinTitle": "Join the Future",
+        "joinButton": "Work With Us"
+    },
+    "Blog": {
+        "title": "AI Insights",
+        "subtitle": "Latest trends and strategies in Artificial Intelligence for business.",
+        "readMore": "Read Article",
+        "categories": {
+            "all": "All",
+            "guide": "Guides",
+            "case_study": "Case Studies",
+            "news": "News"
+        },
+        "featured": {
+            "badge": "Featured",
+            "title": "The Impact of AI Agents on Modern Business",
+            "excerpt": "How autonomous AI is reshaping the workforce and creating new opportunities."
+        }
+    },
+    "Solutions": {
+        "featured": {
+            "title": "WhatsApp AI Agent",
+            "tags": "Bespoke Strategies • Custom LLMs • Detailed Analytics",
+            "description": "The best AI WhatsApp agent for your business. Transform every customer interaction into a growth opportunity with intelligent automation, custom-trained AI models, and seamless CRM integrations. Your 24/7 AI workforce that handles sales, support, and operations globally.",
+            "agentName": "Your Business AI Orchestrator",
+            "chat": {
+                "user1": "Analyze Q3 sales data and predict Q4 trends.",
+                "aiResponse": "Based on current metrics, I project a 15% increase. I've generated a full report and notified the sales team. 📈",
+                "user2": "Excellent. Schedule a review meeting."
+            }
+        }
+    }
+}
