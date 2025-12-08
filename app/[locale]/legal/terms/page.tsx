@@ -24,7 +24,7 @@ export default function TermsOfService() {
                 <FadeIn delay={0.2}>
                     <div className="prose prose-invert prose-lg max-w-none text-muted-foreground/90">
                         <p className="lead text-xl text-foreground font-medium mb-8">
-                            By accessing or using AI Solution ("Service"), you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service.
+                            By accessing or using AI Operators ("Service"), you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service.
                         </p>
 
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">1. Acceptable Use</h3>
@@ -40,7 +40,7 @@ export default function TermsOfService() {
 
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">2. Intellectual Property</h3>
                         <p className="mb-8">
-                            The Service and its original content (excluding content provided by you), features, and functionality are and will remain the exclusive property of AI Solution and its licensors.
+                            The Service and its original content (excluding content provided by you), features, and functionality are and will remain the exclusive property of AI Operators and its licensors.
                         </p>
 
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">3. Termination</h3>
@@ -50,12 +50,12 @@ export default function TermsOfService() {
 
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">4. Limitation of Liability</h3>
                         <p className="mb-8">
-                            In no event shall AI Solution, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits.
+                            In no event shall AI Operators, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits.
                         </p>
 
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">5. Governing Law</h3>
                         <p>
-                            These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which AI Solution operates, without regard to its conflict of law provisions.
+                            These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which AI Operators operates, without regard to its conflict of law provisions.
                         </p>
                     </div>
                 </FadeIn>

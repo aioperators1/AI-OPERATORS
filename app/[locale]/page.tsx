@@ -191,11 +191,11 @@ export default function Home() {
 
         <LogoMarquee
           logos={[
-            { name: "AI Solution", abbr: "AI", image: "/partnerai.png" },
+            { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
             { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
-            { name: "AI Solution", abbr: "AI", image: "/partnerai.png" },
+            { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
             { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
-            { name: "AI Solution", abbr: "AI", image: "/partnerai.png" },
+            { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
             { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
           ]}
         />

@@ -6,8 +6,19 @@ import { Button } from "@/components/ui/Button"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
 export function Footer() {
     const tFooter = useTranslations("Footer");
+    const { theme, resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const logoSrc = mounted && (theme === 'dark' || resolvedTheme === 'dark') ? '/logowhit.png' : '/logoblack.png';
 
     return (
         <footer className="relative border-t border-border bg-card/40 backdrop-blur-xl pt-20 pb-10">
@@ -16,16 +27,16 @@ export function Footer() {
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
                 {/* Brand Column */}
                 <div className="md:col-span-4 space-y-6">
-                    <Link href="/" className="inline-flex items-center gap-1 group">
+                    <Link href="/" className="inline-flex items-center gap-0 group">
                         <div className="relative h-12 w-12">
                             <Image
-                                src="/logo.jpg?v=3"
-                                alt="AI Solutions Logo"
+                                src={logoSrc}
+                                alt="AI Operators Logo"
                                 fill
-                                className="object-contain mix-blend-screen"
+                                className="object-contain"
                             />
                         </div>
-                        <span className="font-bold text-2xl text-foreground tracking-tight">Solution</span>
+                        <span className="font-bold text-2xl text-foreground tracking-tight">perators</span>
                     </Link>
                     <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
                         {tFooter("tagline")}
@@ -89,7 +100,7 @@ export function Footer() {
 
             <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto px-6">
                 <p className="text-muted-foreground text-sm">
-                    © {new Date().getFullYear()} AI Solution. {tFooter("rights")}
+                    © {new Date().getFullYear()} AI Operators. {tFooter("rights")}
                 </p>
                 <div className="flex gap-6 text-sm text-muted-foreground">
                     <Link href="/legal/privacy" className="hover:text-foreground transition-colors">{tFooter("privacy")}</Link>

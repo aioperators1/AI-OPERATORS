@@ -67,9 +67,9 @@ export default function Contact() {
             // Success!
             setIsSuccess(true)
             setFormData({ name: "", email: "", message: "" }) // Reset form
-        } catch (error) {
-            console.error(error)
-            setSubmitError(t('errorGeneric'))
+        } catch (error: any) {
+            console.error('Submission error:', error);
+            setSubmitError(error.message || t('errorGeneric'));
         } finally {
             setIsSubmitting(false)
         }
@@ -94,11 +94,11 @@ export default function Contact() {
                             <div>
                                 <h3 className="text-foreground/80 dark:text-white/80 font-medium mb-6 uppercase tracking-wider text-sm">{t('detailsTitle')}</h3>
                                 <div className="space-y-6">
-                                    <a href="mailto:albatoure66@gmail.com" className="group flex items-center gap-4 text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors">
+                                    <a href="mailto:ai.operators.group@gmail.com" className="group flex items-center gap-4 text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors">
                                         <div className="h-12 w-12 border border-border dark:border-white/10 bg-secondary/50 dark:bg-white/5 rounded-2xl flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-300">
                                             <Mail size={20} className="group-hover:text-primary transition-colors" />
                                         </div>
-                                        <span className="text-lg text-sm md:text-base break-all">albatoure66@gmail.com</span>
+                                        <span className="text-lg text-sm md:text-base break-all">ai.operators.group@gmail.com</span>
                                     </a>
 
                                     <div className="space-y-4">

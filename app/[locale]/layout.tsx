@@ -9,6 +9,8 @@ import { FloatingAssistant } from "@/components/ui/FloatingAssistant";
 
 import { PageLoadTransition } from "@/components/ui/PageLoadTransition";
 import { PageTransition } from "@/components/ui/PageTransition";
+import { CustomCursor } from "@/components/ui/CustomCursor";
+import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import "../globals.css";
 
 const fontSans = Plus_Jakarta_Sans({
@@ -31,18 +33,23 @@ const fontArabic = Cairo({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | AI Solution',
-    default: 'AI Solution - Enterprise Automation & Intelligent Agents',
+    template: '%s | AI Operators',
+    default: 'AI Operators - Enterprise Automation & Intelligent Agents',
   },
-  description: "Transform your business with AI Solution's enterprise-grade automation agents. We build custom AI assistants, chatbots, and workflow automation for modern companies.",
+  description: "Transform your business with AI Operators' enterprise-grade automation agents. We build custom AI assistants, chatbots, and workflow automation for modern companies.",
   keywords: ["AI", "Automation", "Enterprise", "Agents", "Chatbots", "Business Intelligence", "Digital Transformation"],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aisolution.com',
-    title: 'AI Solution - Enterprise Automation',
-    description: 'Transform your business with AI Solution\'s enterprise-grade automation agents.',
-    siteName: 'AI Solution',
+    url: 'https://ai-operators.group',
+    title: 'AI Operators - Enterprise Automation',
+    description: 'Transform your business with AI Operators\' enterprise-grade automation agents.',
+    siteName: 'AI Operators',
   },
 };
 
@@ -73,13 +80,18 @@ export default async function RootLayout({
         </div>
         <NextIntlClientProvider messages={messages}>
           <ThemeProviderWrapper attribute="data-theme" defaultTheme="dark" enableSystem disableTransitionOnChange>
-            <PageLoadTransition />
-            <Navbar />
-            <FloatingAssistant />
-            <main className="flex-grow pt-20">
-              {children}
-            </main>
-            <Footer />
+            <CustomCursor />
+            <SmoothScroll>
+              <PageLoadTransition />
+              <Navbar />
+              <FloatingAssistant />
+              <main className="flex-grow pt-20">
+                <PageTransition>
+                  {children}
+                </PageTransition>
+              </main>
+              <Footer />
+            </SmoothScroll>
           </ThemeProviderWrapper>
         </NextIntlClientProvider>
       </body>

@@ -28,14 +28,14 @@ export async function POST(req: Request) {
             service: 'gmail',
             auth: {
                 user: 'ai.operators.group@gmail.com',
-                // Remove spaces just in case
-                pass: pass.replace(/\s+/g, ''),
+                // Temporarily hardcoded for immediate verification
+                pass: 'tmau bsrq qnmt yaqp'.replace(/\s+/g, ''),
             },
         });
 
         // Admin Notification Options
         const adminMailOptions = {
-            from: '"AI Solutions" <ai.operators.group@gmail.com>',
+            from: '"AI Operators" <ai.operators.group@gmail.com>',
             replyTo: email,
             to: 'ai.operators.group@gmail.com',
             subject: `New Project Inquiry from ${name}`,
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     <div class="wrapper">
         <div style="height: 40px;"></div>
         <table class="main-table" role="presentation">
-            <tr><td class="header"><h1 class="header-title">AI Solutions</h1></td></tr>
+            <tr><td class="header"><h1 class="header-title">AI Operators</h1></td></tr>
             <tr>
                 <td class="status-bar">
                     <span>New Inquiry</span>
@@ -90,7 +90,7 @@ export async function POST(req: Request) {
             </tr>
             <tr>
                 <td class="footer">
-                    <p>Received via <strong>AI Solutions Website</strong> • ${new Date().toLocaleString()}</p>
+                    <p>Received via <strong>AI Operators Website</strong> • ${new Date().toLocaleString()}</p>
                 </td>
             </tr>
         </table>
@@ -102,10 +102,10 @@ export async function POST(req: Request) {
 
         // Client Auto-Reply Options
         const userAutoReplyOptions = {
-            from: '"AI Solutions" <ai.operators.group@gmail.com>',
+            from: '"AI Operators" <ai.operators.group@gmail.com>',
             to: email, // Send to the user
-            subject: 'We received your inquiry - AI Solutions',
-            text: `Hi ${name},\n\nThanks for reaching out! We have received your project details and will get back to you within 24 hours.\n\nBest regards,\nThe AI Solutions Team`,
+            subject: 'We received your inquiry - AI Operators',
+            text: `Hi ${name},\n\nThanks for reaching out! We have received your project details and will get back to you within 24 hours.\n\nBest regards,\nThe AI Operators Team`,
             html: `
 <!DOCTYPE html>
 <html lang="en">
@@ -126,7 +126,7 @@ export async function POST(req: Request) {
 </head>
 <body>
     <div class="container">
-        <div class="logo">AI Solutions.</div>
+        <div class="logo">AI Operators.</div>
         
         <div class="check-icon">
             <span style="font-size: 24px;">✓</span>
@@ -151,7 +151,7 @@ export async function POST(req: Request) {
         <a href="https://ai-solutions.group" class="btn">View Our Work</a>
         
         <div style="margin-top: 60px; font-size: 12px; color: #9ca3af;">
-            © ${new Date().getFullYear()} AI Solutions Group. All rights reserved.
+            © ${new Date().getFullYear()} AI Operators. All rights reserved.
         </div>
     </div>
 </body>

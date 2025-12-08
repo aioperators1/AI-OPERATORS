@@ -106,12 +106,12 @@
     },
     "CTA": {
         "title": "Ready to transform your business?",
-        "subtitle": "Join the innovative companies already scaling with AI Solution Group. Contact us today.",
+        "subtitle": "Join the innovative companies already scaling with AI Operators. Contact us today.",
         "primary": "Get Started Now",
         "secondary": "View Solutions"
     },
     "Footer": {
-        "tagline": "AI Solution - Empowering Businesses Through AI. We build high-performance AI systems for companies worldwide.",
+        "tagline": "AI Operators - Empowering Businesses Through AI. We build high-performance AI systems for companies worldwide.",
         "services": "Services",
         "company": "Company",
         "connect": "Connect",
@@ -165,7 +165,7 @@
         "cta": "Start Saving Today"
     },
     "Assistant": {
-        "greeting": "Hi there! 👋 Welcome to AI Solution.",
+        "greeting": "Hi there! 👋 Welcome to AI Operators.",
         "help": "I'm your intelligent virtual assistant. I can help you with understanding our AI solutions, pricing, or booking a consultation. How can I help?",
         "option1": "Our Solutions",
         "option2": "About Us",
@@ -188,12 +188,12 @@
     "About": {
         "badge": "Who We Are",
         "titlePrefix": "About",
-        "titleSuffix": "AI Solution",
+        "titleSuffix": "AI Operators",
         "subtitle": "We build high-performance AI systems for companies in Qatar, Morocco, and worldwide.",
         "storyTitle": "Our Story",
-        "storyP1": "AI Solution builds high-performance AI systems for companies in Qatar, Morocco, and worldwide. We are a team of experienced engineers, data scientists, and business strategists dedicated to transforming how businesses operate through artificial intelligence.",
+        "storyP1": "AI Operators builds high-performance AI systems for companies in Qatar, Morocco, and worldwide. We are a team of experienced engineers, data scientists, and business strategists dedicated to transforming how businesses operate through artificial intelligence.",
         "storyP2": "Our mission is to make advanced AI technology accessible to businesses of all sizes, helping them compete in an increasingly digital world. From startups to enterprises, we deliver solutions that drive real results.",
-        "imageTitle": "AI SOLUTION",
+        "imageTitle": "AI OPERATORS",
         "imageSubtitle": "Empowering Businesses",
         "missionTitle": "Our Mission",
         "missionDesc": "To empower every business with intelligent automation tools that drive growth and efficiency.",

@@ -295,19 +295,8 @@ export default function Solutions() {
                                 {/* Plan name */}
                                 <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
 
-                                {/* Price */}
-                                <div className="mb-6">
-                                    <div className="flex items-baseline gap-1">
-                                        <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                                        <span className="text-sm text-muted-foreground">{plan.period}</span>
-                                    </div>
-                                </div>
-
-                                {/* Divider */}
-                                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
-
                                 {/* Features */}
-                                <ul className="space-y-3 mb-8">
+                                <ul className="space-y-3 mb-8 mt-6">
                                     {plan.features.map((feature) => (
                                         <li key={feature} className="flex items-start gap-2.5">
                                             <div className="mt-0.5 h-4 w-4 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">

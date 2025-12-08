@@ -11,10 +11,24 @@ import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 
+import { Magnetic } from "@/components/ui/Magnetic"
+import { useTheme } from "next-themes"
+
 export function Navbar() {
     const t = useTranslations("Navbar")
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const { theme, resolvedTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     const navLinks = [
         { name: t("solutions"), href: "/solutions" },
@@ -23,13 +37,7 @@ export function Navbar() {
         { name: t("about"), href: "/about" },
     ]
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
-        }
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+    const logoSrc = mounted && (theme === 'dark' || resolvedTheme === 'dark') ? '/logowhit.png' : '/logoblack.png'
 
     return (
         <nav className={cn(
@@ -39,39 +47,42 @@ export function Navbar() {
                 : "bg-transparent border-transparent py-5 px-4"
         )}>
             <div className="flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-1 group">
+                <Link href="/" className="flex items-center gap-0 group">
                     <div className="relative h-12 w-12">
                         <Image
-                            src="/logo.jpg?v=3"
-                            alt="AI Solutions Logo"
+                            src={logoSrc} // Dynamic Logo
+                            alt="AI Operators Logo"
                             fill
-                            className="object-contain mix-blend-screen"
+                            className="object-contain"
                             priority
                         />
                     </div>
-                    <span className="font-bold text-2xl text-foreground tracking-tight">Solution</span>
+                    <span className="font-bold text-2xl text-foreground tracking-tight">perators</span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-1 bg-secondary/50 rounded-full p-1 border border-foreground/10 backdrop-blur-md shadow-inner shadow-foreground/5">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className="text-sm font-medium px-5 py-2 rounded-full hover:bg-foreground/5 text-muted-foreground hover:text-foreground transition-all duration-300"
-                        >
-                            {link.name}
-                        </Link>
+                        <Magnetic key={link.name}>
+                            <Link
+                                href={link.href}
+                                className="inline-block text-sm font-medium px-5 py-2 rounded-full hover:bg-foreground/5 text-muted-foreground hover:text-foreground transition-all duration-300"
+                            >
+                                {link.name}
+                            </Link>
+                        </Magnetic>
                     ))}
                 </div>
 
                 <div className="hidden md:flex items-center gap-2">
                     <LocaleSwitcher />
                     <ThemeToggle />
-                    <Link href="/contact">
-                        <Button className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6">
-                            {t("bookDemo")}
-                        </Button>
-                    </Link>
+                    <Magnetic>
+                        <Link href="/contact">
+                            <Button className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6">
+                                {t("bookDemo")}
+                            </Button>
+                        </Link>
+                    </Magnetic>
                 </div>
 
                 <div className="md:hidden">

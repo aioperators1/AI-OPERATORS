@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
                 <FadeIn delay={0.2}>
                     <div className="prose prose-invert prose-lg max-w-none text-muted-foreground/90">
                         <p className="lead text-xl text-foreground font-medium mb-8">
-                            This Privacy Policy explains how AI Solution ("we", "us", or "our") collects, uses, and discloses your information when you use our website and AI services.
+                            This Privacy Policy explains how AI Operators ("we", "us", or "our") collects, uses, and discloses your information when you use our website and AI services.
                         </p>
 
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">1. Information We Collect</h3>
@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
                         <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">4. Contact Us</h3>
                         <p>
                             If you have any questions about this Privacy Policy, please contact us at: <br />
-                            <span className="text-primary font-medium">privacy@aisolution.com</span>
+                            <span className="text-primary font-medium">privacy@ai-operators.group</span>
                         </p>
                     </div>
                 </FadeIn>

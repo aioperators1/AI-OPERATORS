@@ -28,25 +28,22 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
                 key={pathname}
                 initial={{
                     opacity: 0,
-                    scale: 0.96, // Start slightly zoomed out (deep)
-                    y: 20,       // Slight upward drift
-                    filter: "blur(12px)"
+                    y: 15,
+                    scale: 0.98
                 }}
                 animate={{
                     opacity: 1,
-                    scale: 1,
                     y: 0,
-                    filter: "blur(0px)"
+                    scale: 1,
                 }}
                 exit={{
                     opacity: 0,
-                    scale: 1.04, // Zoom in slightly (pushing through)
-                    y: -20,      // Continued upward drift
-                    filter: "blur(12px)"
+                    y: -15,
+                    scale: 0.98,
                 }}
                 transition={{
-                    duration: 0.7,
-                    ease: [0.22, 1, 0.36, 1] // Custom cubic-bezier for "Fluid" feel
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1] // "Swift" ease
                 }}
                 className="flex-1 w-full"
             >
