@@ -200,7 +200,7 @@ export default function Home() {
 
           {/* Marquee Wrapper - Isolated to prevent layout bleed */}
           <div className="w-screen relative left-1/2 -translate-x-1/2 mb-8">
-            <div className="w-full overflow-hidden mask-image-linear-gradient">
+            <div className="w-full overflow-hidden">
               <LogoMarquee
                 logos={[
                   { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },

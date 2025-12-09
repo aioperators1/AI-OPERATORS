@@ -13,7 +13,11 @@ const languages = [
     { code: "ar", label: "العربية", flag: "🇸🇦" },
 ]
 
-export function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+    mode?: "dropdown" | "list"
+}
+
+export function LocaleSwitcher({ mode = "dropdown" }: LocaleSwitcherProps) {
     const locale = useLocale()
     const router = useRouter()
     const pathname = usePathname()
@@ -40,6 +44,28 @@ export function LocaleSwitcher() {
     }
 
     const currentLang = languages.find(l => l.code === locale) || languages[0]
+
+    if (mode === "list") {
+        return (
+            <div className="flex items-center gap-2 bg-secondary/30 rounded-full p-1 border border-border">
+                {languages.map((lang) => (
+                    <button
+                        key={lang.code}
+                        onClick={() => onSelectChange(lang.code)}
+                        disabled={isPending}
+                        className={cn(
+                            "px-3 py-1.5 rounded-full text-xs font-medium transition-all",
+                            locale === lang.code
+                                ? "bg-primary text-primary-foreground shadow-md"
+                                : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                        )}
+                    >
+                        {lang.code.toUpperCase()}
+                    </button>
+                ))}
+            </div>
+        )
+    }
 
     return (
         <div className="relative" ref={containerRef}>

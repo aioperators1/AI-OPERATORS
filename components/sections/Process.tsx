@@ -53,13 +53,7 @@ export function Process() {
     return (
         <Section className="py-32 relative overflow-hidden" ref={containerRef}>
             {/* Center Line with Animated Fill */}
-            {/* Center Line with Animated Fill */}
-            <div className="absolute left-4 rtl:right-4 md:left-1/2 top-65 bottom-24 w-[2px] bg-border/30 -translate-x-1/2 md:block hidden">
-                <motion.div
-                    style={{ scaleY: scrollYProgress, transformOrigin: "top" }}
-                    className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary via-blue-500 to-purple-500"
-                />
-            </div>
+            {/* Center Line Removed as per user request */}
 
 
 
@@ -78,7 +72,7 @@ export function Process() {
             <div className="max-w-5xl mx-auto relative z-10 px-4">
                 {steps.map((step, i) => (
                     <FadeIn key={i} delay={i * 0.15}>
-                        <div className={`flex flex-row items-start md:items-center gap-6 md:gap-16 mb-16 last:mb-0 relative ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                        <div className={`flex flex-row items-start lg:items-center gap-6 lg:gap-16 mb-16 last:mb-0 relative ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
 
                             {/* Center Icon Node - Static on Mobile, 3D on Desktop */}
                             <div className="relative shrink-0 z-10 group perspective-1000">
@@ -93,13 +87,13 @@ export function Process() {
                             </div>
 
                             {/* Text Content */}
-                            <div className={`flex-1 text-start ${i % 2 === 1 ? 'md:text-end' : ''}`}>
+                            <div className={`flex-1 text-start ${i % 2 === 1 ? 'lg:text-end' : ''}`}>
                                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{step.title}</h3>
                                 <p className="text-muted-foreground leading-relaxed text-base md:text-lg">{step.desc}</p>
                             </div>
 
                             {/* Empty flexible space for balance */}
-                            <div className="flex-1 hidden md:block" />
+                            <div className="flex-1 hidden lg:block" />
                         </div>
                     </FadeIn>
                 ))}

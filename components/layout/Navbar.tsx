@@ -117,8 +117,8 @@ export function Navbar() {
                                 </Link>
                             ))}
                             <div className="h-px bg-border/50 my-2" />
-                            <div className="flex gap-4 justify-center py-2">
-                                <LocaleSwitcher />
+                            <div className="flex flex-col gap-4 items-center justify-center py-4">
+                                <LocaleSwitcher mode="list" />
                                 <ThemeToggle />
                             </div>
                             <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-2">
