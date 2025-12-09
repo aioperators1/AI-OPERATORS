@@ -10,8 +10,8 @@ import { useTranslations } from "next-intl"
 export default function Solutions() {
     const t = useTranslations("Solutions");
     return (
-        <div className="flex flex-col min-h-screen pt-20">
-            <Section className="relative pt-32 pb-20 text-center space-y-8">
+        <div className="flex flex-col min-h-screen pt-20 overflow-hidden">
+            <Section className="relative pt-24 md:pt-32 pb-20 text-center space-y-8">
                 {/* Spotlight Effect */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10" />
 

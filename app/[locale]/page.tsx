@@ -10,6 +10,8 @@ import { Process } from "@/components/sections/Process"
 import { CountUp } from "@/components/ui/CountUp"
 import { LogoMarquee } from "@/components/ui/LogoMarquee"
 import { useTranslations } from "next-intl"
+import { ScrollRevealText } from "@/components/ui/ScrollRevealText"
+import { Magnetic } from "@/components/ui/Magnetic"
 
 
 export default function Home() {
@@ -23,42 +25,49 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <Section className="relative flex flex-col items-center justify-center text-center pt-48 md:pt-60 pb-40">
-        {/* Spotlight Effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10" />
+      {/* Hero Section */}
+      <Section className="relative flex flex-col items-center justify-center text-center pt-24 md:pt-60 pb-12 md:pb-40 px-4">
+        {/* Spotlight Effect - Responsive Size */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-primary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
 
         <FadeIn delay={0.1}>
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-transparent px-3 py-1 text-xs font-medium text-primary mb-8">
-            <Zap size={12} className="mr-2 fill-primary" />
+          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary mb-8 backdrop-blur-sm">
+            <Zap size={14} className="mr-2 fill-primary" />
             {t("badge")}
           </div>
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground max-w-6xl mb-6 leading-[1.1]">
-            {t("titleStart")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary/80">{t("titleMiddle")}</span> {t("titleEnd")}
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground max-w-[95vw] mx-auto mb-6 leading-[1.15] break-words">
+            <span className="block">{t("titleStart")}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary/80 pb-2 md:pb-0">{t("titleMiddle")}</span>
+            <span className="block">{t("titleEnd")}</span>
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12 font-medium">
-            {t("description")}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 font-medium px-2">
+            <ScrollRevealText className="inline-block max-w-[90vw] break-words">{t("description")}</ScrollRevealText>
           </p>
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="h-12 px-8 text-base font-semibold">
-                {t("ctaPrimary")}
-                <ArrowRight size={18} className="ms-2 rtl:rotate-180" />
-              </Button>
-            </Link>
-            <Link href="/solutions">
-              <Button variant="secondary" size="lg" className="h-12 px-8 text-base font-semibold border border-border bg-white/50 dark:bg-white/5 hover:bg-accent text-foreground dark:text-white">
-                {t("ctaSecondary")}
-              </Button>
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto px-4 sm:px-0">
+            <Magnetic>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button size="lg" className="h-14 sm:h-12 w-full sm:w-auto px-8 text-base font-semibold shadow-lg shadow-primary/20">
+                  {t("ctaPrimary")}
+                  <ArrowRight size={18} className="ms-2 rtl:rotate-180" />
+                </Button>
+              </Link>
+            </Magnetic>
+            <Magnetic>
+              <Link href="/solutions" className="w-full sm:w-auto">
+                <Button variant="secondary" size="lg" className="h-14 sm:h-12 w-full sm:w-auto px-8 text-base font-semibold border border-border bg-background/60 hover:bg-accent text-foreground">
+                  {t("ctaSecondary")}
+                </Button>
+              </Link>
+            </Magnetic>
           </div>
         </FadeIn>
       </Section>
@@ -66,55 +75,55 @@ export default function Home() {
 
 
       {/* Stats Section */}
-      <Section className="py-24">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-5xl mx-auto">
+      <Section className="py-8 md:py-24">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 md:gap-12 max-w-5xl mx-auto">
           <FadeIn delay={0.1}>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+            <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
+              <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">
                 <CountUp end={850} suffix="+" />
               </div>
-              <div className="text-sm text-muted-foreground">{tStats("activeUsers")}</div>
+              <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">{tStats("activeUsers")}</div>
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+            <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
+              <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">
                 <CountUp end={99.9} decimals={1} suffix="%" />
               </div>
-              <div className="text-sm text-muted-foreground">{tStats("uptime")}</div>
+              <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">{tStats("uptime")}</div>
             </div>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+            <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
+              <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">
                 <CountUp end={12} suffix="+" />
               </div>
-              <div className="text-sm text-muted-foreground">{tStats("countries")}</div>
+              <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">{tStats("countries")}</div>
             </div>
           </FadeIn>
           <FadeIn delay={0.4}>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+            <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
+              <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">
                 <CountUp end={45000} suffix="+" />
               </div>
-              <div className="text-sm text-muted-foreground">{tStats("messagesDay")}</div>
+              <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">{tStats("messagesDay")}</div>
             </div>
           </FadeIn>
         </div>
       </Section>
 
       {/* Features Section */}
-      <Section className="py-24">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+      <Section className="py-10 md:py-24">
+        <div className="text-center mb-12 max-w-3xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{tFeatures("headerTitle")}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{tFeatures("headerTitle")}</h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-lg text-muted-foreground">{tFeatures("headerSubtitle")}</p>
+            <p className="text-base md:text-lg text-muted-foreground">{tFeatures("headerSubtitle")}</p>
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 max-w-7xl mx-auto">
           {[
             { key: "agents", icon: Bot, color: "text-primary", bg: "bg-primary/10" },
             { key: "predictive", icon: Brain, color: "text-purple-500", bg: "bg-purple-500/10" },
@@ -126,11 +135,11 @@ export default function Home() {
             { key: "analytics", icon: BarChart3, color: "text-cyan-500", bg: "bg-cyan-500/10" },
           ].map((feature, index) => (
             <FadeIn key={feature.key} delay={0.1 * (index + 1)}>
-              <div className="p-8 rounded-2xl border border-border bg-card hover:border-primary/50 transition-colors h-full">
-                <div className={`h-12 w-12 ${feature.bg} rounded-xl flex items-center justify-center mb-6 ${feature.color}`}>
+              <div className="p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-card transition-all duration-300 h-full">
+                <div className={`h-12 w-12 ${feature.bg} rounded-2xl flex items-center justify-center mb-6 ${feature.color}`}>
                   <feature.icon size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">{tFeatures(`items.${feature.key}.title`)}</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{tFeatures(`items.${feature.key}.title`)}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{tFeatures(`items.${feature.key}.desc`)}</p>
               </div>
             </FadeIn>
@@ -139,17 +148,17 @@ export default function Home() {
       </Section>
 
       {/* Industries Section */}
-      <Section className="py-24">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+      <Section className="py-12 md:py-24">
+        <div className="text-center mb-12 max-w-3xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{tIndustries("title")}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{tIndustries("title")}</h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-lg text-muted-foreground">{tIndustries("subtitle")}</p>
+            <p className="text-base md:text-lg text-muted-foreground">{tIndustries("subtitle")}</p>
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {[
             { key: "realestate", icon: Building, color: "text-emerald-500", bg: "bg-emerald-500/10" },
             { key: "restaurants", icon: Utensils, color: "text-orange-500", bg: "bg-orange-500/10" },
@@ -159,9 +168,9 @@ export default function Home() {
             { key: "ecommerce", icon: ShoppingCart, color: "text-cyan-500", bg: "bg-cyan-500/10" },
           ].map((industry, index) => (
             <FadeIn key={industry.key} delay={0.1 * index}>
-              <div className="flex items-start gap-6 p-6 rounded-2xl border border-border bg-card hover:bg-secondary/30 transition-colors">
-                <div className={`shrink-0 h-12 w-12 rounded-xl flex items-center justify-center ${industry.bg} ${industry.color}`}>
-                  <industry.icon size={24} />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-6 rounded-3xl border border-border/50 bg-card/50 hover:bg-card hover:border-border transition-all duration-300">
+                <div className={`shrink-0 h-14 w-14 rounded-2xl flex items-center justify-center ${industry.bg} ${industry.color}`}>
+                  <industry.icon size={28} />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{tIndustries(`items.${industry.key}.title`)}</h3>
@@ -175,65 +184,70 @@ export default function Home() {
 
       <Process />
 
-      {/* Trusted Companies Marquee */}
-      {/* Trusted Companies Marquee */}
-      <Section className="py-20 border-b border-border/50">
-        <div className="text-center mb-10">
-          <FadeIn>
-            <h2 className="text-3xl font-bold text-foreground mb-4">{tPartners("trustedBy")}</h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto">
+      <Section className="py-10 md:py-24 border-b border-white/5 relative overflow-hidden">
+        {/* Container for the entire section content - Strictly constrained */}
+        <div className="flex flex-col items-center w-full max-w-[100vw] px-4 overflow-hidden">
+
+          {/* Header Text */}
+          <div className="text-center mb-6 w-full max-w-3xl mx-auto relative z-20">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 break-words">
+              {tPartners("trustedBy")}
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground break-words px-4">
               {tPartners("trustedBySubtitle")}
             </p>
-          </FadeIn>
-        </div>
+          </div>
 
-        <LogoMarquee
-          logos={[
-            { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
-            { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
-            { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
-            { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
-            { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
-            { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
-          ]}
-        />
+          {/* Marquee Wrapper - Isolated to prevent layout bleed */}
+          <div className="w-screen relative left-1/2 -translate-x-1/2 mb-8">
+            <div className="w-full overflow-hidden mask-image-linear-gradient">
+              <LogoMarquee
+                logos={[
+                  { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
+                  { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
+                  { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
+                  { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
+                  { name: "AI Operators", abbr: "AI", image: "/partnerai.png" },
+                  { name: "Qunvert", abbr: "QV", image: "/partnerqunvert.png" },
+                ]}
+              />
+            </div>
+          </div>
 
-        <FadeIn delay={0.2}>
-          <div className="mt-16 text-center">
-            <h3 className="text-xl font-semibold text-foreground mb-2">
+          {/* Footer Text */}
+          <div className="text-center w-full max-w-2xl mx-auto relative z-20 px-4">
+            <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3 break-words">
               {tPartners("partnerTitle")}
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 text-sm md:text-base break-words">
               {tPartners("partnerSubtitle")}
             </p>
             <Link href="/contact">
-              <Button variant="outline" className="rounded-full px-6 border-primary/20 hover:bg-primary/5 text-primary hover:text-primary transition-colors">
-                Become a Partner <ArrowRight size={14} className="ml-2" />
+              <Button variant="outline" className="rounded-full px-8 h-12 border-primary/20 hover:bg-primary/5 text-primary hover:text-primary transition-colors font-medium">
+                Become a Partner <ArrowRight size={16} className="ms-2 rtl:rotate-180" />
               </Button>
             </Link>
           </div>
-        </FadeIn>
+        </div>
       </Section>
 
-      {/* CTA Section */}
-      <Section className="py-24">
+      {/* CTA Section - Mobile Optimized */}
+      <Section className="py-16 md:py-24">
         <FadeIn>
-          <div className="relative rounded-3xl p-16 md:p-24 text-center bg-gradient-to-b from-primary/5 to-transparent border border-primary/20">
-            <div className="max-w-3xl mx-auto space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground">{tCTA("title")}</h2>
-              <p className="text-lg text-muted-foreground">
+          <div className="relative rounded-[2rem] p-6 md:p-20 text-center bg-gradient-to-b from-primary/5 to-transparent border border-primary/20 w-full overflow-hidden">
+            <div className="max-w-3xl mx-auto space-y-6 px-2">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground break-words leading-tight">{tCTA("title")}</h2>
+              <p className="text-base md:text-lg text-muted-foreground break-words max-w-[95%] mx-auto">
                 {tCTA("subtitle")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                <Link href="/contact">
-                  <Button size="lg" className="h-12 px-8 text-base font-semibold">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 w-full sm:w-auto">
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <Button size="lg" className="h-14 sm:h-12 w-full sm:w-auto px-10 text-base font-bold shadow-xl shadow-primary/20">
                     {tCTA("primary")}
                   </Button>
                 </Link>
-                <Link href="https://wa.me/1234567890">
-                  <Button size="lg" variant="outline" className="h-12 px-8 text-base font-semibold">
+                <Link href="https://wa.me/1234567890" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="h-14 sm:h-12 w-full sm:w-auto px-10 text-base font-bold bg-background/50 backdrop-blur-sm">
                     {tCTA("secondary")}
                   </Button>
                 </Link>

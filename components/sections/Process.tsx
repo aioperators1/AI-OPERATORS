@@ -54,15 +54,14 @@ export function Process() {
         <Section className="py-32 relative overflow-hidden" ref={containerRef}>
             {/* Center Line with Animated Fill */}
             {/* Center Line with Animated Fill */}
-            <div className="absolute left-4 md:left-1/2 top-65 bottom-24 w-[2px] bg-border/30 -translate-x-1/2 md:block hidden md:visible">
+            <div className="absolute left-4 rtl:right-4 md:left-1/2 top-65 bottom-24 w-[2px] bg-border/30 -translate-x-1/2 md:block hidden">
                 <motion.div
                     style={{ scaleY: scrollYProgress, transformOrigin: "top" }}
                     className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary via-blue-500 to-purple-500"
                 />
             </div>
 
-            {/* Mobile Line */}
-            <div className="absolute left-8 top-24 bottom-24 w-[2px] bg-border/50 md:hidden" />
+
 
             <div className="text-center mb-24 relative z-10">
                 <FadeIn>
@@ -79,24 +78,24 @@ export function Process() {
             <div className="max-w-5xl mx-auto relative z-10 px-4">
                 {steps.map((step, i) => (
                     <FadeIn key={i} delay={i * 0.15}>
-                        <div className={`flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 mb-24 last:mb-0 relative ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                        <div className={`flex flex-row items-start md:items-center gap-6 md:gap-16 mb-16 last:mb-0 relative ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
 
-                            {/* Text Content */}
-                            <div className={`flex-1 pl-16 md:pl-0 text-left md:text-start ${i % 2 === 1 ? 'md:text-end' : ''}`}>
-                                <h3 className="text-3xl font-bold text-foreground mb-4">{step.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed text-lg">{step.desc}</p>
-                            </div>
-
-                            {/* Center Icon Node - 3D Floating Effect */}
-                            <div className="absolute left-0 top-0 md:relative shrink-0 z-10 group perspective-1000">
+                            {/* Center Icon Node - Static on Mobile, 3D on Desktop */}
+                            <div className="relative shrink-0 z-10 group perspective-1000">
                                 <div className={`h-16 w-16 md:h-20 md:w-20 rounded-2xl flex items-center justify-center ${step.bg} ${step.color} border ${step.border} backdrop-blur-xl shadow-[0_0_30px_-5px_rgba(0,0,0,0.5)] z-10 relative transition-all duration-500 group-hover:scale-110 group-hover:rotate-y-12 group-hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] transform-style-3d`}>
                                     <step.icon size={32} className="md:w-10 md:h-10 transform-style-3d group-hover:translate-z-10" />
                                     {/* Number Badge */}
-                                    <div className="absolute -top-3 -right-3 h-8 w-8 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-muted-foreground shadow-lg">
+                                    <div className="absolute -top-3 -right-3 rtl:-left-3 rtl:right-auto h-8 w-8 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-muted-foreground shadow-lg">
                                         {i + 1}
                                     </div>
                                 </div>
                                 <div className={`absolute inset-0 ${step.bg} blur-2xl opacity-40 rounded-full -z-10 group-hover:opacity-70 transition-opacity duration-500`} />
+                            </div>
+
+                            {/* Text Content */}
+                            <div className={`flex-1 text-start ${i % 2 === 1 ? 'md:text-end' : ''}`}>
+                                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{step.title}</h3>
+                                <p className="text-muted-foreground leading-relaxed text-base md:text-lg">{step.desc}</p>
                             </div>
 
                             {/* Empty flexible space for balance */}

@@ -76,8 +76,8 @@ export default function Contact() {
     }
 
     return (
-        <div className="flex flex-col min-h-screen">
-            <Section className="pt-32 pb-12">
+        <div className="flex flex-col min-h-screen overflow-hidden">
+            <Section className="pt-24 md:pt-32 pb-12">
                 <FadeIn>
                     <div className="max-w-4xl mx-auto text-center mb-20">
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-foreground">{t('title')}</h1>
@@ -178,7 +178,7 @@ export default function Contact() {
                                                         />
                                                     </div>
                                                     {errors.name && (
-                                                        <span className="text-xs text-red-400 pl-1">{errors.name}</span>
+                                                        <span className="text-xs text-red-400 ps-1">{errors.name}</span>
                                                     )}
                                                 </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
                                                         />
                                                     </div>
                                                     {errors.email && (
-                                                        <span className="text-xs text-red-400 pl-1">{errors.email}</span>
+                                                        <span className="text-xs text-red-400 ps-1">{errors.email}</span>
                                                     )}
                                                 </div>
                                             </div>
@@ -222,7 +222,7 @@ export default function Contact() {
                                                     />
                                                 </div>
                                                 {errors.message && (
-                                                    <span className="text-xs text-red-400 pl-1">{errors.message}</span>
+                                                    <span className="text-xs text-red-400 ps-1">{errors.message}</span>
                                                 )}
                                             </div>
 
@@ -239,7 +239,7 @@ export default function Contact() {
                                                         </span>
                                                     ) : (
                                                         <span className="flex items-center gap-2">
-                                                            {t('buttonSend')} <Send size={18} />
+                                                            {t('buttonSend')} <Send size={18} className="rtl:-scale-x-100" />
                                                         </span>
                                                     )}
                                                 </Button>

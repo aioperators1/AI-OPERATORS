@@ -9,7 +9,6 @@ import { FloatingAssistant } from "@/components/ui/FloatingAssistant";
 
 import { PageLoadTransition } from "@/components/ui/PageLoadTransition";
 import { PageTransition } from "@/components/ui/PageTransition";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import "../globals.css";
 
@@ -78,14 +77,37 @@ export default async function RootLayout({
           <div className="absolute left-0 top-0 -z-10 h-[500px] w-[500px] -translate-x-[30%] -translate-y-[30%] rounded-full bg-primary/20 blur-[100px] opacity-50" />
           <div className="absolute right-0 bottom-0 -z-10 h-[500px] w-[500px] translate-x-[30%] translate-y-[30%] rounded-full bg-blue-600/20 blur-[100px] opacity-50" />
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "AI Operators",
+              "url": "https://ai-operators.group",
+              "logo": "https://ai-operators.group/logo.png",
+              "sameAs": [
+                "https://twitter.com/aioperators",
+                "https://linkedin.com/company/ai-operators"
+              ],
+              "description": "Enterprise-grade AI automation solutions and intelligent agents for modern businesses.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-0123",
+                "contactType": "sales",
+                "areaServed": "Global",
+                "availableLanguage": ["English", "French", "Arabic"]
+              }
+            })
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <ThemeProviderWrapper attribute="data-theme" defaultTheme="dark" enableSystem disableTransitionOnChange>
-            <CustomCursor />
             <SmoothScroll>
               <PageLoadTransition />
               <Navbar />
               <FloatingAssistant />
-              <main className="flex-grow pt-20">
+              <main className="flex-grow pt-36 md:pt-24">
                 <PageTransition>
                   {children}
                 </PageTransition>

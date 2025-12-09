@@ -21,13 +21,13 @@ export function Footer() {
     const logoSrc = mounted && (theme === 'dark' || resolvedTheme === 'dark') ? '/logowhit.png' : '/logoblack.png';
 
     return (
-        <footer className="relative border-t border-border bg-card/40 backdrop-blur-xl pt-20 pb-10">
+        <footer className="relative border-t border-border bg-card/40 backdrop-blur-xl pt-20 pb-24">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12 mb-16">
                 {/* Brand Column */}
-                <div className="md:col-span-4 space-y-6">
-                    <Link href="/" className="inline-flex items-center gap-0 group">
+                <div className="col-span-2 md:col-span-4 space-y-6">
+                    <Link href="/" className="inline-flex items-center gap-0 group" dir="ltr">
                         <div className="relative h-12 w-12">
                             <Image
                                 src={logoSrc}
@@ -51,7 +51,7 @@ export function Footer() {
                 </div>
 
                 {/* Links Columns */}
-                <div className="md:col-span-2 space-y-4">
+                <div className="col-span-1 md:col-span-2 space-y-4">
                     <h4 className="font-bold text-foreground text-lg">{tFooter("services")}</h4>
                     <ul className="space-y-3">
                         {[
@@ -65,7 +65,7 @@ export function Footer() {
                     </ul>
                 </div>
 
-                <div className="md:col-span-2 space-y-4">
+                <div className="col-span-1 md:col-span-2 space-y-4">
                     <h4 className="font-bold text-foreground text-lg">{tFooter("company")}</h4>
                     <ul className="space-y-3">
                         {[
@@ -80,7 +80,7 @@ export function Footer() {
                 </div>
 
                 {/* Newsletter / CTA */}
-                <div className="md:col-span-4 space-y-4">
+                <div className="col-span-2 md:col-span-4 space-y-4">
                     <h4 className="font-bold text-foreground text-lg">{tFooter("subscribe")}</h4>
                     <p className="text-muted-foreground">
                         {tFooter("subscribeDesc")}

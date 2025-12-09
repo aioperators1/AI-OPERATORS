@@ -5,7 +5,8 @@
         "portfolio": "Portfolio",
         "about": "À propos",
         "contact": "Contact",
-        "bookDemo": "Réserver une démo"
+        "bookDemo": "Réserver une démo",
+        "blog": "Blog"
     },
     "Hero": {
         "badge": "AI Solution 2.0 Maintenant Disponible",

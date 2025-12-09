@@ -41,14 +41,14 @@ export function Navbar() {
 
     return (
         <nav className={cn(
-            "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-7xl rounded-full border",
+            "fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-7xl rounded-full border",
             scrolled
                 ? "bg-background/80 backdrop-blur-xl border-border shadow-lg shadow-black/5 py-3 px-6"
-                : "bg-transparent border-transparent py-5 px-4"
+                : "bg-transparent border-transparent py-5 px-6"
         )}>
-            <div className="flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-0 group">
-                    <div className="relative h-12 w-12">
+            <div className="flex items-center justify-between" dir="ltr">
+                <Link href="/" className="flex items-center gap-1 md:gap-2 group" dir="ltr">
+                    <div className="relative h-9 w-9 md:h-12 md:w-12 transition-transform duration-300 group-hover:scale-105">
                         <Image
                             src={logoSrc} // Dynamic Logo
                             alt="AI Operators Logo"
@@ -57,7 +57,7 @@ export function Navbar() {
                             priority
                         />
                     </div>
-                    <span className="font-bold text-2xl text-foreground tracking-tight">perators</span>
+                    <span className="font-bold text-xl md:text-2xl text-foreground tracking-tight">perators</span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-1 bg-secondary/50 rounded-full p-1 border border-foreground/10 backdrop-blur-md shadow-inner shadow-foreground/5">
@@ -88,7 +88,7 @@ export function Navbar() {
                 <div className="md:hidden">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="text-foreground hover:text-primary transition-colors p-2"
+                        className="text-foreground hover:text-primary transition-colors p-3 rounded-full hover:bg-secondary/50"
                         aria-label="Toggle menu"
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,25 +99,34 @@ export function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95, y: -20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.95, y: -20 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 right-0 mt-4 bg-card border border-border rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col gap-2"
+                        initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="md:hidden flex flex-col mt-4 bg-card/95 backdrop-blur-xl border border-border rounded-3xl overflow-hidden shadow-2xl max-h-[80vh] overflow-y-auto"
                     >
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                onClick={() => setIsOpen(false)}
-                                className="text-base font-medium hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors py-4 px-6 rounded-xl"
-                            >
-                                {link.name}
+                        <div className="p-4 flex flex-col gap-2">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-lg font-medium hover:bg-primary/10 hover:text-primary transition-colors py-4 px-6 rounded-2xl text-center active:bg-primary/5"
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <div className="h-px bg-border/50 my-2" />
+                            <div className="flex gap-4 justify-center py-2">
+                                <LocaleSwitcher />
+                                <ThemeToggle />
+                            </div>
+                            <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-2">
+                                <Button className="w-full rounded-2xl py-6 bg-primary text-primary-foreground font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                                    {t("bookDemo")}
+                                </Button>
                             </Link>
-                        ))}
-                        <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-2">
-                            <Button className="w-full rounded-xl py-6 bg-primary text-primary-foreground font-bold text-lg">{t("bookDemo")}</Button>
-                        </Link>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -92,7 +92,7 @@ export default function Blog() {
                                 <Sparkles size={12} />
                                 {t('title')}
                             </motion.div>
-                            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
+                            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1] break-words max-w-[90vw]">
                                 Insights for the <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">AI Era</span>
                             </h1>
@@ -133,7 +133,7 @@ export default function Blog() {
                                         <Calendar size={12} className="mr-1.5" /> {posts[0].date}
                                     </span>
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-primary transition-all">
+                                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-primary transition-all break-words">
                                     {posts[0].title}
                                 </h2>
                                 <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
@@ -161,8 +161,8 @@ export default function Blog() {
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${selectedCategory === cat
-                                        ? "text-primary border-primary/20 bg-primary/10 shadow-lg shadow-primary/10"
-                                        : "text-muted-foreground border-border hover:border-foreground/20 hover:text-foreground bg-card/50"
+                                    ? "text-primary border-primary/20 bg-primary/10 shadow-lg shadow-primary/10"
+                                    : "text-muted-foreground border-border hover:border-foreground/20 hover:text-foreground bg-card/50"
                                     }`}
                             >
                                 {t(`categories.${cat}`)}
@@ -187,8 +187,8 @@ export default function Blog() {
                                             <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
                                             <div className="absolute top-4 left-4">
                                                 <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md ${post.category === 'news' ? 'bg-blue-500/20 text-blue-400 border-blue-500/30' :
-                                                        post.category === 'case_study' ? 'bg-amber-500/20 text-amber-400 border-amber-500/30' :
-                                                            'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                                                    post.category === 'case_study' ? 'bg-amber-500/20 text-amber-400 border-amber-500/30' :
+                                                        'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
                                                     }`}>
                                                     {t(`categories.${post.category}`)}
                                                 </span>
@@ -206,7 +206,7 @@ export default function Blog() {
                                                 </div>
                                             </div>
 
-                                            <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                                            <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight break-words">
                                                 {post.title}
                                             </h3>
                                             <p className="text-muted-foreground text-sm line-clamp-3 mb-6 flex-1 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
@@ -241,7 +241,7 @@ export default function Blog() {
                             <div className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 text-primary mb-8 shadow-lg shadow-primary/10">
                                 <Tag size={32} />
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Stay ahead of the curve</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 break-words max-w-[90vw] mx-auto">Stay ahead of the curve</h2>
                             <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto leading-relaxed">
                                 Join 5,000+ founders receiving our weekly deep dives on AI, automation, and growth strategies.
                             </p>
