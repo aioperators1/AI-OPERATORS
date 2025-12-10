@@ -1,7 +1,7 @@
 "use client"
 
 import { Link } from "@/navigation"
-import { ArrowRight, Bot, MessageSquare, Zap, CheckCircle2, Smartphone, Globe, Clock, ShieldCheck, Brain, TrendingUp, Wrench, Database, BarChart3, Building, Utensils, Truck, ShoppingBag, Landmark, ShoppingCart } from "lucide-react"
+import { ArrowRight, Bot, MessageSquare, Zap, CheckCircle2, Smartphone, Globe, Clock, ShieldCheck, Brain, TrendingUp, Wrench, Database, BarChart3, Building, Utensils, Truck, ShoppingBag, Landmark, ShoppingCart, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
 import { Card } from "@/components/ui/Card"
@@ -10,13 +10,14 @@ import { Process } from "@/components/sections/Process"
 import { CountUp } from "@/components/ui/CountUp"
 import { LogoMarquee } from "@/components/ui/LogoMarquee"
 import { useTranslations } from "next-intl"
-import { ScrollRevealText } from "@/components/ui/ScrollRevealText"
+
 import { Magnetic } from "@/components/ui/Magnetic"
 
 
 export default function Home() {
   const t = useTranslations("Hero");
   const tFeatures = useTranslations("Features");
+  const tSpecialized = useTranslations("SpecializedModules");
   const tCTA = useTranslations("CTA");
   const tStats = useTranslations("Stats");
   const tPartners = useTranslations("Partners");
@@ -47,7 +48,7 @@ export default function Home() {
 
         <FadeIn delay={0.3}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 font-medium px-2">
-            <ScrollRevealText className="inline-block max-w-[90vw] break-words">{t("description")}</ScrollRevealText>
+            {t("description")}
           </p>
         </FadeIn>
 
@@ -141,6 +142,46 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{tFeatures(`items.${feature.key}.title`)}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{tFeatures(`items.${feature.key}.desc`)}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
+
+      {/* Specialized Modules Section */}
+      <Section className="py-10 md:py-24">
+        <div className="text-center mb-12 max-w-3xl mx-auto px-4">
+          <FadeIn>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 relative inline-block">
+              {tSpecialized("title")}
+              {/* Optional: Add underline/arc effect here if needed, simplified for now */}
+            </h2>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 max-w-7xl mx-auto">
+          {[
+            { key: "analytics", icon: BarChart3, color: "text-red-500", bg: "bg-red-500/10" },
+            { key: "support", icon: Zap, color: "text-orange-500", bg: "bg-orange-500/10" },
+            { key: "scheduling", icon: Calendar, color: "text-purple-500", bg: "bg-purple-500/10" },
+          ].map((feature, index) => (
+            <FadeIn key={feature.key} delay={0.1 * (index + 1)}>
+              <div className="relative p-8 rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-card transition-all duration-300 h-full group overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-medium border border-yellow-500/20">
+                    {tSpecialized(`items.${feature.key}.tag`)}
+                  </span>
+                </div>
+
+                <div className={`h-14 w-14 ${feature.bg} rounded-2xl flex items-center justify-center mb-6 ${feature.color}`}>
+                  <feature.icon size={28} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{tSpecialized(`items.${feature.key}.title`)}</h3>
+                <p className="text-muted-foreground leading-relaxed text-base">{tSpecialized(`items.${feature.key}.desc`)}</p>
+
+                <div className="mt-6">
+                  <span className="text-primary text-sm font-semibold tracking-wide uppercase">LEARN MORE</span>
+                </div>
               </div>
             </FadeIn>
           ))}
