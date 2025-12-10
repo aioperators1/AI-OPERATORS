@@ -81,7 +81,7 @@ export default function Home() {
           <FadeIn delay={0.1}>
             <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
               <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">
-                <CountUp end={850} suffix="+" />
+                <CountUp end={7} suffix="+" />
               </div>
               <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">{tStats("activeUsers")}</div>
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
           <FadeIn delay={0.3}>
             <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
               <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">
-                <CountUp end={12} suffix="+" />
+                <CountUp end={5} suffix="+" />
               </div>
               <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">{tStats("countries")}</div>
             </div>

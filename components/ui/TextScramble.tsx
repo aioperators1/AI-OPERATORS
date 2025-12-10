@@ -19,7 +19,7 @@ export function TextScramble({
     delay = 0,
 }: TextScrambleProps) {
     const [displayedText, setDisplayedText] = useState("");
-    const [isScrambling, setIsScrambling] = useState(true);
+    // Removed unused state
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
 
     useEffect(() => {
@@ -50,7 +50,6 @@ export function TextScramble({
                 if (counter >= totalIterations) {
                     clearInterval(interval);
                     setDisplayedText(text);
-                    setIsScrambling(false);
                 }
             }, speed * 1000);
         };

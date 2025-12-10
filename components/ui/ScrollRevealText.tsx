@@ -1,6 +1,6 @@
 "use client"
 
-import { useScroll, useTransform, motion } from "framer-motion"
+import { useScroll, useTransform, motion, MotionValue } from "framer-motion"
 import { useRef } from "react"
 
 interface ScrollRevealTextProps {
@@ -19,22 +19,24 @@ export function ScrollRevealText({ children, className }: ScrollRevealTextProps)
 
     return (
         <span ref={ref} className={className}>
-            {words.map((word, i) => {
-                const start = i / words.length
-                const end = start + (1 / words.length)
-                // Map scroll progress to opacity for each word
-                const opacity = useTransform(scrollYProgress, [start, end], [0.1, 1])
-
-                return (
-                    <motion.span
-                        key={i}
-                        style={{ opacity }}
-                        className="inline-block mr-[0.2em] transition-opacity duration-200"
-                    >
-                        {word}
-                    </motion.span>
-                )
-            })}
+            {words.map((word, i) => (
+                <Word key={i} word={word} index={i} total={words.length} progress={scrollYProgress} />
+            ))}
         </span>
+    )
+}
+
+function Word({ word, index, total, progress }: { word: string, index: number, total: number, progress: MotionValue<number> }) {
+    const start = index / total
+    const end = start + (1 / total)
+    const opacity = useTransform(progress, [start, end], [0.1, 1])
+
+    return (
+        <motion.span
+            style={{ opacity }}
+            className="inline-block mr-[0.2em] transition-opacity duration-200"
+        >
+            {word}
+        </motion.span>
     )
 }

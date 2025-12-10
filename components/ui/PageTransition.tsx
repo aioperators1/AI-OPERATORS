@@ -3,12 +3,13 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime"
-import { useContext, useRef } from "react"
+import { useContext, useState } from "react"
 
 // This prevents the exit-ing component from re-rendering and losing state/styles
 function FrozenRouter(props: { children: React.ReactNode }) {
     const context = useContext(LayoutRouterContext ?? {})
-    const frozen = useRef(context).current
+    // Capture the context once on mount/initial render
+    const [frozen] = useState(context)
 
     return (
         <LayoutRouterContext.Provider value={frozen}>
