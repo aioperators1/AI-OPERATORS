@@ -9,25 +9,81 @@
         "blog": "Blog"
     },
     "Hero": {
-        "badge": "AI Solution 2.0 Maintenant Disponible",
-        "titleStart": "Automatisez",
-        "titleMiddle": "Toute Votre",
-        "titleEnd": "Entreprise",
-        "description": "Nous sommes AI Solution - Votre partenaire de confiance en automatisation intelligente. Notre produit phare, Qunvert, transforme WhatsApp en un outil commercial puissant alimenté par l'IA. Automatisez les conversations, boostez l'engagement et évoluez sans effort avec notre technologie de pointe.",
-        "ctaPrimary": "Commencer Gratuitement",
-        "ctaSecondary": "Explorer les Cas d'Usage"
+        "badge": "Solutions d'IA pour Entreprises",
+        "titleStart": "Nous Construisons",
+        "titleMiddle": "Des Solutions IA",
+        "titleEnd": "Pour l'Entreprise Moderne",
+        "description": "Donner aux entreprises les moyens d'agir grâce à l'IA. Nous créons des solutions d'IA avancées qui transforment les opérations, automatisent les flux de travail et stimulent la croissance des entreprises modernes.",
+        "ctaPrimary": "Contactez-nous",
+        "ctaSecondary": "Nos Solutions"
     },
     "Features": {
-        "headerTitle": "Conçu pour l'Entreprise Moderne",
-        "headerSubtitle": "Des fonctionnalités puissantes pour un avantage concurrentiel décisif.",
-        "aiTitle": "Intelligence Artificielle Avancée",
-        "aiDesc": "Nos agents ne suivent pas de simples scripts. Ils comprennent le contexte, l'intention et le sentiment pour des interactions humaines qui convertissent.",
-        "whatsappTitle": "Intégration WhatsApp Native",
-        "whatsappDesc": "Intégré directement à l'application de messagerie la plus populaire au monde. Aucune installation requise pour vos clients.",
-        "availabilityTitle": "Disponibilité 24/7",
-        "availabilityDesc": "Ne manquez jamais une opportunité. Votre agent répond instantanément à chaque demande, jour et nuit, quel que soit le fuseau horaire.",
-        "securityTitle": "Sécurité de Niveau Entreprise",
-        "securityDesc": "Vos données vous appartiennent. Nous mettons en œuvre un chiffrement de bout en bout et des protocoles de confidentialité stricts."
+        "headerTitle": "Solutions d'IA pour Entreprises",
+        "headerSubtitle": "Des solutions d'IA de qualité professionnelle conçues pour transformer vos opérations commerciales et accélérer la croissance.",
+        "items": {
+            "agents": {
+                "title": "Agents IA & Automatisation",
+                "desc": "Des agents IA autonomes qui gèrent des tâches complexes, apprennent des interactions et font évoluer vos opérations 24/7."
+            },
+            "predictive": {
+                "title": "Intelligence Prédictive",
+                "desc": "Modèles d'apprentissage automatique qui prévoient les tendances, anticipent le comportement des clients et guident les décisions stratégiques."
+            },
+            "workflow": {
+                "title": "Automatisation de Workflow",
+                "desc": "Rationalisez les processus métier avec une automatisation intelligente qui réduit les coûts et élimine les erreurs humaines."
+            },
+            "chatbots": {
+                "title": "Chatbots IA",
+                "desc": "IA conversationnelle qui engage les clients, gère le support et génère des leads 24h/24."
+            },
+            "sales": {
+                "title": "Automatisation des Ventes",
+                "desc": "Outils de vente alimentés par l'IA qui qualifient les leads, personnalisent la prospection et accélèrent la croissance de vos revenus."
+            },
+            "custom": {
+                "title": "Outils IA Personnalisés",
+                "desc": "Solutions IA sur mesure adaptées à vos défis commerciaux uniques et avantages concurrentiels."
+            },
+            "integration": {
+                "title": "Intégrations CRM/ERP",
+                "desc": "Connectez de manière transparente les capacités d'IA à vos systèmes existants pour une productivité accrue."
+            },
+            "analytics": {
+                "title": "Analyse de Données",
+                "desc": "Transformez les données brutes en informations exploitables avec des tableaux de bord et des rapports pilotés par l'IA."
+            }
+        }
+    },
+    "Industries": {
+        "title": "Industries que nous servons",
+        "subtitle": "Solutions IA spécialisées adaptées à diverses industries et à leurs défis uniques.",
+        "items": {
+            "realestate": {
+                "title": "Immobilier",
+                "desc": "Évaluation immobilière par IA, scoring de leads et visites virtuelles."
+            },
+            "restaurants": {
+                "title": "Restauration",
+                "desc": "Commande intelligente, gestion des stocks et insights clients."
+            },
+            "logistics": {
+                "title": "Logistique",
+                "desc": "Optimisation d'itinéraires, prévision de la demande et gestion de flotte."
+            },
+            "retail": {
+                "title": "Commerce de Détail",
+                "desc": "Recommandations personnalisées, IA d'inventaire et optimisation des prix."
+            },
+            "finance": {
+                "title": "Finance",
+                "desc": "Détection de fraude, évaluation des risques et conformité automatisée."
+            },
+            "ecommerce": {
+                "title": "E-Commerce",
+                "desc": "Recherche IA, tarification dynamique et optimisation du parcours client."
+            }
+        }
     },
     "Process": {
         "badge": "Notre Méthodologie",
@@ -43,22 +99,36 @@
         "step4Desc": "Surveillance continue et ajustements pour garantir que votre IA devient plus intelligente à chaque interaction."
     },
     "Partners": {
-        "trustedBy": "La confiance d'entreprises visionnaires"
+        "trustedBy": "Partenaires de Confiance",
+        "trustedBySubtitle": "Nous collaborons avec les leaders de l'industrie pour fournir des solutions d'IA exceptionnelles.",
+        "partnerTitle": "Prêt à devenir partenaire ?",
+        "partnerSubtitle": "Rejoignez notre réseau grandissant de clients entreprises tirant parti de l'IA pour transformer leur activité."
     },
     "CTA": {
-        "title": "Prêt à automatiser votre croissance ?",
-        "subtitle": "Rejoignez les entreprises qui évoluent déjà avec AI Solution. Configuration en moins de 24 heures.",
+        "title": "Prêt à transformer votre entreprise ?",
+        "subtitle": "Rejoignez les entreprises innovantes qui évoluent déjà avec AI Operators. Contactez-nous dès aujourd'hui.",
         "primary": "Commencer Maintenant",
-        "secondary": "Discuter avec l'Agent Démo"
+        "secondary": "Voir les Solutions"
     },
     "Footer": {
-        "tagline": "Nous construisons l'infrastructure intelligente qui propulse les entreprises modernes. Ventes, support et opérations — entièrement automatisés.",
+        "tagline": "AI Operators - Donner aux entreprises les moyens d'agir grâce à l'IA. Nous construisons des systèmes d'IA haute performance pour les entreprises du monde entier.",
         "services": "Services",
         "company": "Entreprise",
         "connect": "Connexion",
         "subscribe": "Restez Informé",
         "subscribeDesc": "Recevez les dernières tendances IA et stratégies d'automatisation directement dans votre boîte de réception.",
-        "rights": "Tous droits réservés."
+        "rights": "Tous droits réservés.",
+        "aiDev": "Développement IA",
+        "workflow": "Automatisation de Workflow",
+        "chatbot": "Conception de Chatbot",
+        "analytics": "Analyse de Données",
+        "aboutUs": "À Propos",
+        "careers": "Carrières",
+        "blogLink": "Blog",
+        "contactLink": "Contact",
+        "privacy": "Politique de Confidentialité",
+        "terms": "Conditions d'Utilisation",
+        "emailPlaceholder": "Entrez votre email"
     },
     "Contact": {
         "title": "Parlons-en.",
@@ -76,7 +146,7 @@
         "placeholderMessage": "Nous avons besoin d'un agent IA qui...",
         "buttonSend": "Envoyer le Message",
         "buttonSending": "Envoi...",
-        "buttonWhatsApp": "Ou discuter sur WhatsApp",
+        "buttonWhatsApp": "Discuter sur WhatsApp",
         "availableNow": "Disponible Maintenant",
         "errorName": "Le nom est requis",
         "errorEmail": "L'email est requis",
@@ -85,28 +155,28 @@
         "errorGeneric": "Une erreur s'est produite. Veuillez réessayer ou nous envoyer un email directement."
     },
     "ROI": {
-        "badge": "Économies",
+        "badge": "Valeur",
         "title": "Calculez Votre ROI",
-        "subtitle": "Découvrez combien vous pouvez économiser en automatisant vos opérations de support client.",
-        "labelTickets": "Tickets Mensuels",
-        "labelCost": "Coût Moyen par Ticket (€)",
+        "subtitle": "Découvrez combien vous pouvez économiser en automatisant vos opérations avec l'IA.",
+        "labelTickets": "Interactions Mensuelles",
+        "labelCost": "Coût par Interaction (€)",
         "labelAutomation": "Taux d'Automatisation Cible (%)",
         "resultTitle": "Économies Annuelles Estimées",
-        "cta": "Commencez à Économiser"
+        "cta": "Commencez à Économiser Aujourd'hui"
     },
     "Assistant": {
-        "greeting": "Bonjour ! 👋 Bienvenue chez AI Solution.",
-        "help": "Je suis votre assistant virtuel intelligent. Je connais tout sur nos services, prix et technologies. Comment puis-je vous aider ?",
-        "option1": "Nos Services",
-        "option2": "Prix & ROI",
-        "option3": "Tech Stack",
-        "option4": "Réserver une Démo",
-        "replyServices": "Nous sommes experts en trois domaines : \n1. **Agents IA :** Bots sur mesure pour le support et les ventes.\n2. **Automation WhatsApp :** Intégration complète avec l'API Business.\n3. **Automatisation de Workflow :** Optimisation des processus avec n8n et LLMs.",
-        "replyCost": "Nous proposons une tarification flexible, du 'Starter' à l'Entreprise. Nos solutions réduisent généralement les coûts opérationnels de 30 à 50% en 3 mois. Souhaitez-vous un devis ?",
-        "replyTech": "Nous utilisons le meilleur de la tech : Next.js 14, React, Tailwind CSS, et Python/Node.js. Nous exploitons la puissance de GPT-4, Claude 3 et modèles Open Source.",
-        "replyDemo": "Excellent choix ! Vous pouvez planifier un appel stratégique de 30 minutes avec notre équipe.",
-        "replyDefault": "C'est une excellente question. Pour vous donner une réponse précise, je vais transmettre votre demande à nos experts humains qui vous répondront par email.",
-        "placeholder": "Posez-moi une question...",
+        "greeting": "Bonjour ! 👋 Bienvenue chez AI Operators.",
+        "help": "Je suis votre assistant virtuel intelligent. Je peux vous aider à comprendre nos solutions d'IA, nos tarifs ou à réserver une consultation. Comment puis-je vous aider ?",
+        "option1": "Nos Solutions",
+        "option2": "À Propos",
+        "option3": "Industries",
+        "option4": "Réserver une Réunion",
+        "replyServices": "Nous offrons une suite complète de solutions d'IA :\n1. **Agents IA & Automatisation**\n2. **Intelligence Prédictive**\n3. **Automatisation de Workflow**\n4. **Chatbots IA**\n5. **Automatisation des Ventes**",
+        "replyCost": "Nous créons des solutions sur mesure basées sur vos besoins spécifiques. Commencez par une consultation pour obtenir un devis personnalisé et une analyse de ROI.",
+        "replyTech": "Nous utilisons des technologies d'IA de pointe, y compris des LLMs personnalisés, des modèles d'apprentissage automatique et des intégrations d'entreprise sécurisées.",
+        "replyDemo": "Super ! Planifions un moment pour discuter de la façon dont nous pouvons transformer votre entreprise. J'ouvre notre calendrier...",
+        "replyDefault": "C'est une excellente question. Bien que je sois une IA, je veux m'assurer que vous obteniez les meilleurs conseils. Je vais demander à l'un de nos consultants en stratégie senior de vous contacter.",
+        "placeholder": "Posez une question sur nos services IA...",
         "send": "Envoyer"
     },
     "Stats": {
@@ -115,9 +185,54 @@
         "countries": "Pays",
         "messagesDay": "Interactions IA"
     },
-    "NotFound": {
-        "title": "Page Non Trouvée",
-        "description": "Désolé, nous n'avons pas trouvé la page que vous recherchez.",
-        "backToHome": "Retour à l'accueil"
+    "About": {
+        "badge": "Qui Sommes-nous",
+        "titlePrefix": "À Propos de",
+        "titleSuffix": "AI Operators",
+        "subtitle": "Nous construisons des systèmes d'IA haute performance pour les entreprises au Qatar, au Maroc et dans le monde entier.",
+        "storyTitle": "Notre Histoire",
+        "storyP1": "AI Operators construit des systèmes d'IA haute performance pour les entreprises au Qatar, au Maroc et dans le monde entier. Nous sommes une équipe d'ingénieurs, de data scientists et de stratèges commerciaux expérimentés dédiés à transformer le mode de fonctionnement des entreprises grâce à l'intelligence artificielle.",
+        "storyP2": "Notre mission est de rendre la technologie d'IA avancée accessible aux entreprises de toutes tailles, en les aidant à être compétitives dans un monde de plus en plus numérique. Des startups aux grandes entreprises, nous fournissons des solutions qui génèrent des résultats réels.",
+        "imageTitle": "AI OPERATORS",
+        "imageSubtitle": "Autonomiser les Entreprises",
+        "missionTitle": "Notre Mission",
+        "missionDesc": "Donner à chaque entreprise des outils d'automatisation intelligents qui stimulent la croissance et l'efficacité.",
+        "visionTitle": "Notre Vision",
+        "visionDesc": "Un avenir où les entreprises fonctionnent à une efficacité maximale grâce à la puissance de l'IA éthique et avancée.",
+        "valuesTitle": "Pourquoi Nous Choisir",
+        "value1": "Livraison Rapide",
+        "value2": "Ingénierie Sur Mesure",
+        "value3": "Qualité Entreprise",
+        "joinTitle": "Rejoignez le Futur",
+        "joinButton": "Travaillez Avec Nous"
+    },
+    "Blog": {
+        "title": "Insights IA",
+        "subtitle": "Dernières tendances et stratégies en Intelligence Artificielle pour les entreprises.",
+        "readMore": "Lire l'Article",
+        "categories": {
+            "all": "Tout",
+            "guide": "Guides",
+            "case_study": "Études de Cas",
+            "news": "Actualités"
+        },
+        "featured": {
+            "badge": "En Vedette",
+            "title": "L'Impact des Agents IA sur l'Entreprise Moderne",
+            "excerpt": "Comment l'IA autonome remodèle la main-d'œuvre et crée de nouvelles opportunités."
+        }
+    },
+    "Solutions": {
+        "featured": {
+            "title": "Agent IA WhatsApp",
+            "tags": "Stratégies Sur Mesure • LLMs Personnalisés • Analytique Détaillée",
+            "description": "Le meilleur agent WhatsApp IA pour votre entreprise. Transformez chaque interaction client en opportunité de croissance avec une automatisation intelligente, des modèles IA entraînés sur mesure et des intégrations CRM transparentes. Votre main-d'œuvre IA 24/7 qui gère les ventes, le support et les opérations à l'échelle mondiale.",
+            "agentName": "Votre Orchestrateur IA d'Entreprise",
+            "chat": {
+                "user1": "Analysez les données de vente du T3 et prévoyez les tendances du T4.",
+                "aiResponse": "Basé sur les métriques actuelles, je projette une augmentation de 15%. J'ai généré un rapport complet et notifié l'équipe commerciale. 📈",
+                "user2": "Excellent. Planifiez une réunion de revue."
+            }
+        }
     }
 }
