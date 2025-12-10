@@ -255,6 +255,45 @@
             }
         }
     },
+    "Portfolio": {
+        "title": "Our Work",
+        "subtitle": "See how we're transforming industries one agent at a time.",
+        "projects": {
+            "project1": {
+                "title": "GlobalRetail Omni-Agent",
+                "category": "E-commerce",
+                "description": "Unified sales and support agent across WhatsApp, Instagram, and Web for a multinational retail brand, increasing conversion by 35%.",
+                "status": "In Development",
+                "linkText": "View Case Study"
+            },
+            "project2": {
+                "title": "FinTech Onboarding Automation",
+                "category": "Finance",
+                "description": "Secure KYC and document verification bot that reduced customer onboarding time from 3 days to 10 minutes.",
+                "status": "In Development",
+                "linkText": "View Case Study"
+            },
+            "project3": {
+                "title": "Enterprise Knowledge Base",
+                "category": "Internal Tool",
+                "description": "RAG-powered internal query agent for a 500+ employee SaaS company, instantly retrieving policy and technical documentation.",
+                "status": "In Development",
+                "linkText": "View Case Study"
+            },
+            "project4": {
+                "title": "LogisticChain Real-Time Tracker",
+                "category": "Logistics",
+                "description": "WhatsApp-based fleet management and shipment tracking system for drivers and end-customers.",
+                "status": "In Development",
+                "linkText": "View Case Study"
+            }
+        },
+        "cta": {
+            "title": "Have a similar project?",
+            "subtitle": "Let's discuss how an AI agent can solve your specific business challenges.",
+            "button": "Start a Project"
+        }
+    },
     "NotFound": {
         "title": "Page Not Found",
         "description": "Sorry, we couldn't find the page you're looking for.",

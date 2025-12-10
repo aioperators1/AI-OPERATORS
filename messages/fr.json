@@ -124,6 +124,45 @@
         "partnerTitle": "Prêt à devenir partenaire ?",
         "partnerSubtitle": "Rejoignez notre réseau croissant de clients entreprises tirant parti de l'IA pour transformer leur activité."
     },
+    "Portfolio": {
+        "title": "Nos Réalisations",
+        "subtitle": "Découvrez comment nous transformons les industries, un agent à la fois.",
+        "projects": {
+            "project1": {
+                "title": "Omni-Agent GlobalRetail",
+                "category": "E-commerce",
+                "description": "Agent unifié de vente et de support sur WhatsApp, Instagram et Web pour une marque de vente au détail multinationale, augmentant la conversion de 35%.",
+                "status": "En Développement",
+                "linkText": "Voir l'Étude de Cas"
+            },
+            "project2": {
+                "title": "Automatisation Onboarding FinTech",
+                "category": "Finance",
+                "description": "Bot sécurisé de vérification d'identité (KYC) et de documents réduisant le temps d'intégration client de 3 jours à 10 minutes.",
+                "status": "En Développement",
+                "linkText": "Voir l'Étude de Cas"
+            },
+            "project3": {
+                "title": "Base de Connaissances Entreprise",
+                "category": "Outil Interne",
+                "description": "Agent de requête interne alimenté par RAG pour une entreprise SaaS de 500+ employés, récupérant instantanément les politiques et la documentation technique.",
+                "status": "En Développement",
+                "linkText": "Voir l'Étude de Cas"
+            },
+            "project4": {
+                "title": "Traceur Temps Réel LogisticChain",
+                "category": "Logistique",
+                "description": "Système de gestion de flotte et de suivi des expéditions basé sur WhatsApp pour les chauffeurs et les clients finaux.",
+                "status": "En Développement",
+                "linkText": "Voir l'Étude de Cas"
+            }
+        },
+        "cta": {
+            "title": "Vous avez un projet similaire ?",
+            "subtitle": "Discutons de la manière dont un agent IA peut résoudre vos défis commerciaux spécifiques.",
+            "button": "Démarrer un Projet"
+        }
+    },
     "CTA": {
         "title": "Prêt à transformer votre entreprise ?",
         "subtitle": "Rejoignez les entreprises innovantes qui évoluent déjà avec AI Operators. Contactez-nous dès aujourd'hui.",
