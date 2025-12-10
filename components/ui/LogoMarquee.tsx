@@ -16,21 +16,38 @@ export function LogoMarquee({ logos }: LogoMarqueeProps) {
     return (
         <div
             className="relative overflow-hidden w-full max-w-full"
+            dir="ltr"
         >
-            {/* Gradient overlays - Optional: removed for cleaner full-width look if preferred, but keeping mask */}
-            {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" /> */}
-            {/* <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" /> */}
+            <style jsx>{`
+                @keyframes marquee-forced-ltr {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee-forced {
+                    animation: marquee-forced-ltr 60s linear infinite;
+                }
+                .animate-marquee-forced:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
+
+            {/* Gradient overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
             {/* Scrolling container */}
             <div
                 ref={scrollRef}
-                className="flex gap-8 md:gap-16 animate-marquee items-center"
+                className="flex gap-16 items-center animate-marquee-forced"
                 style={{
-                    width: "max-content", // Ensure it takes full width of children
+                    width: "max-content",
+                    display: "flex",
+                    flexWrap: "nowrap",
+                    willChange: "transform",
                 }}
             >
                 {/* Quadruple set for guaranteed seamless loop on all Screens with -50% translate */}
-                {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
+                {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
                     <div
                         key={`logo-${index}`}
                         className="flex items-center gap-2 flex-shrink-0"

@@ -11,7 +11,7 @@ const plans = [
         name: "Starter",
         price: "$99",
         period: "/month",
-        description: "Perfect for small businesses getting started with AI",
+        description: "Perfect for pilot projects and small teams",
         features: [
             "Up to 1,000 messages/month",
             "1 AI agent",
@@ -23,14 +23,29 @@ const plans = [
         popular: false,
     },
     {
+        name: "Growth",
+        price: "$199",
+        period: "/month",
+        description: "For scaling teams needing more capacity",
+        features: [
+            "Up to 5,000 messages/month",
+            "2 AI agents",
+            "WhatsApp + Web integration",
+            "Standard analytics",
+            "Priority Email support",
+        ],
+        cta: "Start Free Trial",
+        popular: false,
+    },
+    {
         name: "Professional",
         price: "$299",
         period: "/month",
-        description: "For growing businesses that need more power",
+        description: "For established brands requiring power",
         features: [
             "Up to 10,000 messages/month",
             "3 AI agents",
-            "WhatsApp + Website chat",
+            "Full Omni-channel support",
             "Advanced analytics",
             "Priority support",
             "Custom branding",
@@ -42,7 +57,7 @@ const plans = [
         name: "Enterprise",
         price: "Custom",
         period: "",
-        description: "For large organizations with custom needs",
+        description: "For global organizations with custom needs",
         features: [
             "Unlimited messages",
             "Unlimited AI agents",
@@ -62,23 +77,23 @@ export function Pricing() {
             <div className="text-center mb-16 max-w-3xl mx-auto">
                 <FadeIn>
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                        Simple, Transparent Pricing
+                        Solution Packages
                     </h2>
                 </FadeIn>
                 <FadeIn delay={0.1}>
                     <p className="text-lg text-muted-foreground">
-                        Choose the plan that fits your business. All plans include a 14-day free trial.
+                        Flexible engagement models designed for businesses of all sizes.
                     </p>
                 </FadeIn>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 {plans.map((plan, index) => (
                     <FadeIn key={plan.name} delay={0.1 * (index + 2)}>
                         <div
                             className={`relative p-8 rounded-2xl border ${plan.popular
-                                    ? "border-primary bg-primary/5"
-                                    : "border-border bg-card"
+                                ? "border-primary bg-primary/5"
+                                : "border-border bg-card"
                                 } hover:border-primary/50 transition-colors`}
                         >
                             {plan.popular && (

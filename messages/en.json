@@ -55,6 +55,26 @@
             }
         }
     },
+    "SpecializedModules": {
+        "title": "Specialized Modules",
+        "items": {
+            "analytics": {
+                "title": "Data Analytics",
+                "desc": "Gain insights from conversations. Understand customer sentiment and pain points.",
+                "tag": "Active"
+            },
+            "support": {
+                "title": "Support Triage",
+                "desc": "Instantly resolve Tier 1 queries and categorize complex issues for your team.",
+                "tag": "Active"
+            },
+            "scheduling": {
+                "title": "Smart Scheduling",
+                "desc": "Eliminate the back-and-forth. Let AI handle availability and booking directly",
+                "tag": "Active"
+            }
+        }
+    },
     "Industries": {
         "title": "Industries We Serve",
         "subtitle": "Specialized AI solutions tailored for diverse industries and their unique challenges.",

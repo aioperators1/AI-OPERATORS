@@ -55,24 +55,44 @@
             }
         }
     },
+    "SpecializedModules": {
+        "title": "Modules Spécialisés",
+        "items": {
+            "analytics": {
+                "title": "Analyse de Données",
+                "desc": "Obtenez des informations à partir des conversations. Comprenez le sentiment des clients et les points de douleur.",
+                "tag": "Actif"
+            },
+            "support": {
+                "title": "Triage du Support",
+                "desc": "Résolvez instantanément les demandes de niveau 1 et catégorisez les problèmes complexes pour votre équipe.",
+                "tag": "Actif"
+            },
+            "scheduling": {
+                "title": "Planification Intelligente",
+                "desc": "Éliminez les allers-retours. Laissez l'IA gérer la disponibilité et la réservation directement.",
+                "tag": "Actif"
+            }
+        }
+    },
     "Industries": {
-        "title": "Industries que nous servons",
-        "subtitle": "Solutions IA spécialisées adaptées à diverses industries et à leurs défis uniques.",
+        "title": "Industries Que Nous Servons",
+        "subtitle": "Solutions d'IA spécialisées adaptées aux divers secteurs.",
         "items": {
             "realestate": {
                 "title": "Immobilier",
-                "desc": "Évaluation immobilière par IA, scoring de leads et visites virtuelles."
+                "desc": "Évaluation immobilière par IA, notation des leads et visites virtuelles."
             },
             "restaurants": {
-                "title": "Restauration",
-                "desc": "Commande intelligente, gestion des stocks et insights clients."
+                "title": "Restaurants",
+                "desc": "Commande intelligente, gestion des stocks et connaissance client."
             },
             "logistics": {
                 "title": "Logistique",
-                "desc": "Optimisation d'itinéraires, prévision de la demande et gestion de flotte."
+                "desc": "Optimisation des itinéraires, prévision de la demande et gestion de flotte."
             },
             "retail": {
-                "title": "Commerce de Détail",
+                "title": "Commerce",
                 "desc": "Recommandations personnalisées, IA d'inventaire et optimisation des prix."
             },
             "finance": {
@@ -99,10 +119,10 @@
         "step4Desc": "Surveillance continue et ajustements pour garantir que votre IA devient plus intelligente à chaque interaction."
     },
     "Partners": {
-        "trustedBy": "Partenaires de Confiance",
+        "trustedBy": "La confiance d'entreprises visionnaires",
         "trustedBySubtitle": "Nous collaborons avec les leaders de l'industrie pour fournir des solutions d'IA exceptionnelles.",
         "partnerTitle": "Prêt à devenir partenaire ?",
-        "partnerSubtitle": "Rejoignez notre réseau grandissant de clients entreprises tirant parti de l'IA pour transformer leur activité."
+        "partnerSubtitle": "Rejoignez notre réseau croissant de clients entreprises tirant parti de l'IA pour transformer leur activité."
     },
     "CTA": {
         "title": "Prêt à transformer votre entreprise ?",
