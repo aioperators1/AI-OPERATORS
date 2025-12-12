@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Phone, Send, MessageSquare, Check, AlertCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
 import { Link } from "@/navigation"
@@ -67,9 +67,9 @@ export default function Contact() {
             // Success!
             setIsSuccess(true)
             setFormData({ name: "", email: "", message: "" }) // Reset form
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('Submission error:', error);
-            setSubmitError(error.message || t('errorGeneric'));
+            setSubmitError((error as Error).message || t('errorGeneric'));
         } finally {
             setIsSubmitting(false)
         }
@@ -102,11 +102,24 @@ export default function Contact() {
                                     </a>
 
                                     <div className="space-y-4">
-                                        <a href="https://wa.me/212639127505" className="group flex items-center gap-4 text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors">
+                                        <a href="https://wa.me/212656308735" className="group flex items-center gap-4 text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors">
                                             <div className="h-12 w-12 border border-border dark:border-white/10 bg-secondary/50 dark:bg-white/5 rounded-2xl flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-300">
                                                 <Phone size={20} className="group-hover:text-primary transition-colors" />
                                             </div>
-                                            <span className="text-lg">+212 639 127 505</span>
+                                            <div className="flex flex-col">
+                                                <span className="text-sm font-medium opacity-50 uppercase tracking-widest">Morocco</span>
+                                                <span className="text-lg">+212 656308735</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="https://wa.me/97451704550" className="group flex items-center gap-4 text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors">
+                                            <div className="h-12 w-12 border border-border dark:border-white/10 bg-secondary/50 dark:bg-white/5 rounded-2xl flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-300">
+                                                <Phone size={20} className="group-hover:text-primary transition-colors" />
+                                            </div>
+                                            <div className="flex flex-col">
+                                                <span className="text-sm font-medium opacity-50 uppercase tracking-widest">Qatar</span>
+                                                <span className="text-lg">+974 5170 4550</span>
+                                            </div>
                                         </a>
 
                                         {/* Minimalist Instant Reply Indicator */}
@@ -244,7 +257,7 @@ export default function Contact() {
                                                     )}
                                                 </Button>
                                                 <div className="hidden sm:block text-muted-foreground/30">•</div>
-                                                <Link href="https://wa.me/212639127505" className="w-full sm:w-auto">
+                                                <Link href="https://wa.me/97451704550" className="w-full sm:w-auto">
                                                     <Button type="button" variant="ghost" className="rounded-full h-14 px-8 text-base text-muted-foreground hover:text-foreground dark:hover:text-white hover:bg-secondary dark:hover:bg-white/5 w-full sm:w-auto border border-border dark:border-white/5">
                                                         {t('buttonWhatsApp')}
                                                     </Button>

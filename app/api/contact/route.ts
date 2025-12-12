@@ -168,10 +168,10 @@ export async function POST(req: Request) {
         console.log("Both emails sent successfully!");
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error('Failed to send email - Full Error:', error);
         return NextResponse.json(
-            { error: 'Failed to send email', details: error.message },
+            { error: 'Failed to send email', details: (error as Error).message },
             { status: 500 }
         );
     }

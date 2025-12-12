@@ -2,20 +2,23 @@
 
 import { Section } from "@/components/ui/Section"
 import { FadeIn } from "@/components/ui/FadeIn"
+import { useTranslations } from "next-intl"
 
 export default function TermsOfService() {
+    const t = useTranslations("Terms");
+
     return (
         <div className="flex flex-col min-h-screen pt-20">
             <Section className="pb-12 text-center max-w-4xl mx-auto">
                 <FadeIn>
                     <div className="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-primary mb-4">
-                        Last Updated: December 01, 2024
+                        {t("date")}
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">
-                        Terms of Service
+                        {t("title")}
                     </h1>
                     <p className="text-lg text-muted-foreground">
-                        Please read these terms carefully before using our AI services.
+                        {t("subtitle")}
                     </p>
                 </FadeIn>
             </Section>
@@ -24,38 +27,38 @@ export default function TermsOfService() {
                 <FadeIn delay={0.2}>
                     <div className="prose prose-invert prose-lg max-w-none text-muted-foreground/90">
                         <p className="lead text-xl text-foreground font-medium mb-8">
-                            By accessing or using AI Operators ("Service"), you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service.
+                            {t("intro")}
                         </p>
 
-                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">1. Acceptable Use</h3>
+                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">{t("section1Title")}</h3>
                         <p className="mb-8">
-                            You agree not to use the Service to:
+                            {t("section1Text")}
                         </p>
                         <ul className="list-disc pl-6 space-y-2 mb-8">
-                            <li>Generate harmful, fraudulent, or illegal content</li>
-                            <li>Violate the privacy or rights of others</li>
-                            <li>Reverse engineer the AI models or software</li>
-                            <li>Send unsolicited marketing messages (Spam) via our WhatsApp integration</li>
+                            <li>{t("section1List.item1")}</li>
+                            <li>{t("section1List.item2")}</li>
+                            <li>{t("section1List.item3")}</li>
+                            <li>{t("section1List.item4")}</li>
                         </ul>
 
-                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">2. Intellectual Property</h3>
+                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">{t("section2Title")}</h3>
                         <p className="mb-8">
-                            The Service and its original content (excluding content provided by you), features, and functionality are and will remain the exclusive property of AI Operators and its licensors.
+                            {t("section2Text")}
                         </p>
 
-                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">3. Termination</h3>
+                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">{t("section3Title")}</h3>
                         <p className="mb-8">
-                            We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+                            {t("section3Text")}
                         </p>
 
-                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">4. Limitation of Liability</h3>
+                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">{t("section4Title")}</h3>
                         <p className="mb-8">
-                            In no event shall AI Operators, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits.
+                            {t("section4Text")}
                         </p>
 
-                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">5. Governing Law</h3>
+                        <h3 className="text-foreground text-2xl font-bold mt-12 mb-4">{t("section5Title")}</h3>
                         <p>
-                            These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which AI Operators operates, without regard to its conflict of law provisions.
+                            {t("section5Text")}
                         </p>
                     </div>
                 </FadeIn>

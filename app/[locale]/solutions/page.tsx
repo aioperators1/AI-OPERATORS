@@ -1,6 +1,6 @@
 "use client"
 
-import { Bot, MessageSquare, Briefcase, Calendar, ArrowRight, Check, Zap, BarChart } from "lucide-react"
+import { Bot, Zap, Clock, Shield, BarChart3 as BarChart, Globe, CheckCircle2, Check, ArrowRight, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
 import { Link } from "@/navigation"
@@ -24,7 +24,7 @@ export default function Solutions() {
                         Intelligent <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary/80">Solutions</span>
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        We don't just build bots. We build digital employees that drive real business results and automate your core operations.
+                        We don&apos;t just build bots. We build digital employees that drive real business results and automate your core operations.
                     </p>
                 </FadeIn>
             </Section>

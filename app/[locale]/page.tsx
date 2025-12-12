@@ -1,10 +1,9 @@
 "use client"
 
 import { Link } from "@/navigation"
-import { ArrowRight, Bot, MessageSquare, Zap, CheckCircle2, Smartphone, Globe, Clock, ShieldCheck, Brain, TrendingUp, Wrench, Database, BarChart3, Building, Utensils, Truck, ShoppingBag, Landmark, ShoppingCart, Calendar } from "lucide-react"
+import { ArrowRight, Bot, Zap, MessageSquare, Brain, TrendingUp, Wrench, Database, BarChart3, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
-import { Card } from "@/components/ui/Card"
 import { FadeIn } from "@/components/ui/FadeIn"
 import { Process } from "@/components/sections/Process"
 import { CountUp } from "@/components/ui/CountUp"
@@ -14,10 +13,13 @@ import { useTranslations } from "next-intl"
 import { Magnetic } from "@/components/ui/Magnetic"
 
 
+import { HeroAnimation } from "@/components/ui/HeroAnimation"
+import { IndustryHub } from "@/components/sections/IndustryHub"
+
 export default function Home() {
   const t = useTranslations("Hero");
   const tFeatures = useTranslations("Features");
-  const tSpecialized = useTranslations("SpecializedModules");
+
   const tCTA = useTranslations("CTA");
   const tStats = useTranslations("Stats");
   const tPartners = useTranslations("Partners");
@@ -26,10 +28,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/* Hero Section */}
-      {/* Hero Section */}
-      <Section className="relative flex flex-col items-center justify-center text-center pt-24 md:pt-60 pb-12 md:pb-40 px-4">
-        {/* Spotlight Effect - Responsive Size */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-primary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
+      <Section className="relative flex flex-col items-center justify-center text-center pt-16 md:pt-32 pb-10 md:pb-20 px-4">
+        {/* Dynamic Logo Animation */}
+        <HeroAnimation />
 
         <FadeIn delay={0.1}>
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary mb-8 backdrop-blur-sm">
@@ -76,7 +77,7 @@ export default function Home() {
 
 
       {/* Stats Section */}
-      <Section className="py-8 md:py-24">
+      <Section className="py-6 md:py-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 md:gap-12 max-w-5xl mx-auto">
           <FadeIn delay={0.1}>
             <div className="text-center p-4 rounded-2xl bg-secondary/20 border border-transparent hover:border-primary/10 transition-colors">
@@ -114,7 +115,7 @@ export default function Home() {
       </Section>
 
       {/* Features Section */}
-      <Section className="py-10 md:py-24">
+      <Section className="py-8 md:py-16">
         <div className="text-center mb-12 max-w-3xl mx-auto px-4">
           <FadeIn>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{tFeatures("headerTitle")}</h2>
@@ -148,84 +149,13 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Specialized Modules Section */}
-      <Section className="py-10 md:py-24">
-        <div className="text-center mb-12 max-w-3xl mx-auto px-4">
-          <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 relative inline-block">
-              {tSpecialized("title")}
-              {/* Optional: Add underline/arc effect here if needed, simplified for now */}
-            </h2>
-          </FadeIn>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 max-w-7xl mx-auto">
-          {[
-            { key: "analytics", icon: BarChart3, color: "text-red-500", bg: "bg-red-500/10" },
-            { key: "support", icon: Zap, color: "text-orange-500", bg: "bg-orange-500/10" },
-            { key: "scheduling", icon: Calendar, color: "text-purple-500", bg: "bg-purple-500/10" },
-          ].map((feature, index) => (
-            <FadeIn key={feature.key} delay={0.1 * (index + 1)}>
-              <div className="relative p-8 rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-card transition-all duration-300 h-full group overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-medium border border-yellow-500/20">
-                    {tSpecialized(`items.${feature.key}.tag`)}
-                  </span>
-                </div>
 
-                <div className={`h-14 w-14 ${feature.bg} rounded-2xl flex items-center justify-center mb-6 ${feature.color}`}>
-                  <feature.icon size={28} />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-foreground">{tSpecialized(`items.${feature.key}.title`)}</h3>
-                <p className="text-muted-foreground leading-relaxed text-base">{tSpecialized(`items.${feature.key}.desc`)}</p>
-
-                <div className="mt-6">
-                  <span className="text-primary text-sm font-semibold tracking-wide uppercase">LEARN MORE</span>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </Section>
-
-      {/* Industries Section */}
-      <Section className="py-12 md:py-24">
-        <div className="text-center mb-12 max-w-3xl mx-auto px-4">
-          <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{tIndustries("title")}</h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p className="text-base md:text-lg text-muted-foreground">{tIndustries("subtitle")}</p>
-          </FadeIn>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-          {[
-            { key: "realestate", icon: Building, color: "text-emerald-500", bg: "bg-emerald-500/10" },
-            { key: "restaurants", icon: Utensils, color: "text-orange-500", bg: "bg-orange-500/10" },
-            { key: "logistics", icon: Truck, color: "text-blue-500", bg: "bg-blue-500/10" },
-            { key: "retail", icon: ShoppingBag, color: "text-pink-500", bg: "bg-pink-500/10" },
-            { key: "finance", icon: Landmark, color: "text-indigo-500", bg: "bg-indigo-500/10" },
-            { key: "ecommerce", icon: ShoppingCart, color: "text-cyan-500", bg: "bg-cyan-500/10" },
-          ].map((industry, index) => (
-            <FadeIn key={industry.key} delay={0.1 * index}>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-6 rounded-3xl border border-border/50 bg-card/50 hover:bg-card hover:border-border transition-all duration-300">
-                <div className={`shrink-0 h-14 w-14 rounded-2xl flex items-center justify-center ${industry.bg} ${industry.color}`}>
-                  <industry.icon size={28} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{tIndustries(`items.${industry.key}.title`)}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{tIndustries(`items.${industry.key}.desc`)}</p>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </Section>
+      <IndustryHub />
 
       <Process />
 
-      <Section className="py-10 md:py-24 border-b border-white/5 relative overflow-hidden">
+      <Section className="py-8 md:py-16 border-b border-white/5 relative overflow-hidden">
         {/* Container for the entire section content - Strictly constrained */}
         <div className="flex flex-col items-center w-full max-w-[100vw] px-4 overflow-hidden">
 
@@ -273,7 +203,7 @@ export default function Home() {
       </Section>
 
       {/* CTA Section - Mobile Optimized */}
-      <Section className="py-16 md:py-24">
+      <Section className="py-8 md:py-16">
         <FadeIn>
           <div className="relative rounded-[2rem] p-6 md:p-20 text-center bg-gradient-to-b from-primary/5 to-transparent border border-primary/20 w-full overflow-hidden">
             <div className="max-w-3xl mx-auto space-y-6 px-2">
@@ -287,7 +217,7 @@ export default function Home() {
                     {tCTA("primary")}
                   </Button>
                 </Link>
-                <Link href="https://wa.me/1234567890" className="w-full sm:w-auto">
+                <Link href="https://wa.me/97451704550" className="w-full sm:w-auto">
                   <Button size="lg" variant="outline" className="h-14 sm:h-12 w-full sm:w-auto px-10 text-base font-bold bg-background/50 backdrop-blur-sm">
                     {tCTA("secondary")}
                   </Button>

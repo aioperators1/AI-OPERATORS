@@ -45,7 +45,7 @@ export function Testimonials() {
                                 ))}
                             </div>
                             <p className="text-lg text-foreground italic mb-8 leading-relaxed flex-1">
-                                "{review.text}"
+                                &quot;{review.text}&quot;
                             </p>
                             <div>
                                 <p className="text-foreground font-bold">{review.author}</p>

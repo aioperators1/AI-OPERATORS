@@ -4,13 +4,13 @@ import { FadeIn } from "@/components/ui/FadeIn"
 import { Section } from "@/components/ui/Section"
 import { Search, Code2, Rocket, BarChart3 } from "lucide-react"
 import { useTranslations } from "next-intl"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useScroll } from "framer-motion"
 import { useRef } from "react"
 
 export function Process() {
     const t = useTranslations("Process");
     const containerRef = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({
+    const { } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     })
@@ -51,13 +51,13 @@ export function Process() {
     ]
 
     return (
-        <Section className="py-32 relative overflow-hidden" ref={containerRef}>
-            {/* Center Line with Animated Fill */}
-            {/* Center Line Removed as per user request */}
+        <Section className="py-16 md:py-24 relative overflow-hidden" ref={containerRef}>
+            {/* Simple centered vertical connecting line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border/50 to-transparent -translate-x-1/2 hidden md:block" />
 
 
 
-            <div className="text-center mb-24 relative z-10">
+            <div className="text-center mb-16 relative z-10">
                 <FadeIn>
                     <div className="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground mb-4 backdrop-blur-md">
                         {t("badge")}

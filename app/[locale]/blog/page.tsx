@@ -45,7 +45,7 @@ export default function Blog() {
             author: { initials: "AM", name: "Alex Mike" }
         },
         {
-            title: "AI Solution Launches Multi-Language Support",
+            title: "AI Operators Group Launches Multi-Language Support",
             summary: "Our agents now speak 30+ languages fluently. Expand your global reach today.",
             category: "news",
             date: "Nov 28, 2024",
