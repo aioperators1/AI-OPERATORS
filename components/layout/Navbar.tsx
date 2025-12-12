@@ -22,6 +22,7 @@ export function Navbar() {
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
+        // eslint-disable-next-line
         setMounted(true)
         const handleScroll = () => {
             setScrolled(window.scrollY > 20)

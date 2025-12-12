@@ -71,6 +71,7 @@ export default async function RootLayout({
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} suppressHydrationWarning>
       <body className={`${fontClass} antialiased bg-background text-foreground overflow-x-hidden selection:bg-primary/20 selection:text-primary`}>
         <div className="fixed inset-0 -z-10 h-full w-full bg-background">
+          <div className="bg-noise" />
           <div className="absolute inset-0 bg-dot-white/[0.1]" />
           <div className="absolute inset-0 bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
           {/* Ambient Background Effects */}

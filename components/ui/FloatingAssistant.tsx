@@ -16,6 +16,7 @@ export function FloatingAssistant() {
     // Initial greeting
     useEffect(() => {
         if (isOpen && messages.length === 0) {
+            // eslint-disable-next-line
             setIsTyping(true)
             setTimeout(() => {
                 setMessages([{ role: 'bot', text: t('greeting') }, { role: 'bot', text: t('help') }])
@@ -115,8 +116,8 @@ export function FloatingAssistant() {
                                         {msg.role === 'bot' ? <Bot size={12} /> : <User size={12} />}
                                     </div>
                                     <div className={`max-w-[85%] p-3 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${msg.role === 'bot'
-                                            ? 'bg-secondary/50 border border-white/5 text-foreground rounded-tl-none'
-                                            : 'bg-primary text-primary-foreground rounded-tr-none shadow-primary/20'
+                                        ? 'bg-secondary/50 border border-white/5 text-foreground rounded-tl-none'
+                                        : 'bg-primary text-primary-foreground rounded-tr-none shadow-primary/20'
                                         } text-left`}>
                                         {msg.text}
                                     </div>

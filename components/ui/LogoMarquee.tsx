@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
+import Image from "next/image"
 
 interface LogoMarqueeProps {
     logos: Array<{
@@ -54,10 +55,11 @@ export function LogoMarquee({ logos }: LogoMarqueeProps) {
                     >
                         {logo.image ? (
                             <div className="relative h-12 md:h-16 w-auto min-w-[120px] md:min-w-[160px]">
-                                <img
+                                <Image
                                     src={logo.image}
                                     alt={logo.name}
-                                    className="h-full w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                                    fill
+                                    className="object-contain opacity-90 hover:opacity-100 transition-opacity"
                                 />
                             </div>
                         ) : (

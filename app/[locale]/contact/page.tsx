@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Phone, Send, MessageSquare, Check, AlertCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
 import { Link } from "@/navigation"
@@ -67,9 +67,9 @@ export default function Contact() {
             // Success!
             setIsSuccess(true)
             setFormData({ name: "", email: "", message: "" }) // Reset form
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('Submission error:', error);
-            setSubmitError(error.message || t('errorGeneric'));
+            setSubmitError((error as Error).message || t('errorGeneric'));
         } finally {
             setIsSubmitting(false)
         }

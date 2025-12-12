@@ -1,10 +1,9 @@
 "use client"
 
 import { Link } from "@/navigation"
-import { ArrowRight, Bot, MessageSquare, Zap, CheckCircle2, Smartphone, Globe, Clock, ShieldCheck, Brain, TrendingUp, Wrench, Database, BarChart3, Building, Utensils, Truck, ShoppingBag, Landmark, ShoppingCart, Calendar } from "lucide-react"
+import { ArrowRight, Bot, Zap, MessageSquare, Brain, TrendingUp, Wrench, Database, BarChart3, Calendar, Building, Utensils, Truck, ShoppingBag, Landmark, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
-import { Card } from "@/components/ui/Card"
 import { FadeIn } from "@/components/ui/FadeIn"
 import { Process } from "@/components/sections/Process"
 import { CountUp } from "@/components/ui/CountUp"
@@ -13,6 +12,8 @@ import { useTranslations } from "next-intl"
 
 import { Magnetic } from "@/components/ui/Magnetic"
 
+
+import { HeroAnimation } from "@/components/ui/HeroAnimation"
 
 export default function Home() {
   const t = useTranslations("Hero");
@@ -26,10 +27,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/* Hero Section */}
-      {/* Hero Section */}
       <Section className="relative flex flex-col items-center justify-center text-center pt-24 md:pt-60 pb-12 md:pb-40 px-4">
-        {/* Spotlight Effect - Responsive Size */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-primary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
+        {/* Dynamic Logo Animation */}
+        <HeroAnimation />
 
         <FadeIn delay={0.1}>
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary mb-8 backdrop-blur-sm">

@@ -1,10 +1,11 @@
-import { Terminal, Users, Globe, Award, Target, Eye, Heart, Zap, Bot } from "lucide-react"
+import { Target, Users, Trophy, Globe, Sparkles, Bot, Eye, Heart } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Section } from "@/components/ui/Section"
 import { Link } from "@/navigation"
 import { FadeIn } from "@/components/ui/FadeIn"
 import { Partners } from "@/components/sections/Partners"
 import { CountUp } from "@/components/ui/CountUp"
+import { HeroAnimation } from "@/components/ui/HeroAnimation"
 import { useTranslations } from "next-intl"
 
 export default function About() {
@@ -26,58 +27,65 @@ export default function About() {
                 </FadeIn>
             </Section>
 
-            <Section className="py-0">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Our Story - PRO Design */}
+            <Section className="py-20">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <FadeIn>
-                        <div className="space-y-8">
-                            <h2 className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-6">{t("storyTitle")}</h2>
-
-                            <div className="mb-8 space-y-6">
-                                <p className="text-foreground/80 dark:text-white/90 leading-relaxed text-xl md:text-2xl">
+                        <div className="relative z-10 space-y-10">
+                            <div className="space-y-6">
+                                <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-bold text-primary tracking-widest uppercase">
+                                    <Bot size={14} className="mr-2" />
+                                    {t("storyTitle")}
+                                </div>
+                                <h2 className="text-4xl md:text-6xl font-bold text-foreground dark:text-white leading-tight">
+                                    Building the <br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-indigo-500">Autonomous Future</span>
+                                </h2>
+                                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light">
                                     {t("storyP1")}
                                 </p>
-                            </div>
-
-                            <div className="grid grid-cols-3 gap-6 border-y border-border dark:border-white/10 py-10">
-                                <div className="text-center">
-                                    <div className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-2"><CountUp end={10} suffix="+" /></div>
-                                    <div className="text-xs md:text-sm text-primary/80 uppercase tracking-widest font-bold">COUNTRIES</div>
-                                </div>
-                                <div className="text-center border-l border-border dark:border-white/10">
-                                    <div className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-2"><CountUp end={100} suffix="+" /></div>
-                                    <div className="text-xs md:text-sm text-primary/80 uppercase tracking-widest font-bold">CLIENTS</div>
-                                </div>
-                                <div className="text-center border-l border-border dark:border-white/10">
-                                    <div className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-2"><CountUp end={200} suffix="+" /></div>
-                                    <div className="text-xs md:text-sm text-primary/80 uppercase tracking-widest font-bold">PROJECTS</div>
-                                </div>
-                            </div>
-
-                            <div className="mt-8">
-                                <p className="text-foreground/80 dark:text-white/90 leading-relaxed text-xl md:text-2xl">
+                                <p className="text-lg text-foreground/80 dark:text-slate-300 leading-relaxed border-l-4 border-primary/30 pl-6 italic">
                                     {t("storyP2")}
                                 </p>
                             </div>
+
+                            {/* Stats - Redesigned */}
+                            <div className="grid grid-cols-3 gap-8 py-8 border-t border-border/50">
+                                <div className="space-y-2">
+                                    <div className="flex items-baseline gap-1">
+                                        <span className="text-4xl md:text-5xl font-bold text-foreground dark:text-white"><CountUp end={5} /></span>
+                                        <span className="text-xl text-primary font-bold">+</span>
+                                    </div>
+                                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Countries</div>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="flex items-baseline gap-1">
+                                        <span className="text-4xl md:text-5xl font-bold text-foreground dark:text-white"><CountUp end={170} /></span>
+                                        <span className="text-xl text-primary font-bold">+</span>
+                                    </div>
+                                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Clients</div>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="flex items-baseline gap-1">
+                                        <span className="text-4xl md:text-5xl font-bold text-foreground dark:text-white"><CountUp end={7} /></span>
+                                        <span className="text-xl text-primary font-bold">+</span>
+                                    </div>
+                                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Projects</div>
+                                </div>
+                            </div>
                         </div>
                     </FadeIn>
-                    <FadeIn delay={0.2}>
-                        {/* Premium Glassmorphic Card */}
-                        <div className="relative aspect-square md:aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white/5 via-white/5 to-transparent border border-white/10 shadow-2xl backdrop-blur-sm group">
-                            {/* Animated Glow Behind */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/30 rounded-full blur-[100px] group-hover:bg-primary/40 transition-colors duration-700" />
 
-                            {/* Inner Content */}
-                            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
-                                <div className="h-20 w-20 rounded-3xl bg-gradient-to-tr from-primary/20 to-blue-500/20 border border-primary/20 flex items-center justify-center mb-8 shadow-inner shadow-primary/20 rotate-3 group-hover:rotate-6 transition-transform duration-500">
-                                    <Bot size={40} className="text-primary drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
-                                </div>
-                                <h3 className="text-3xl font-bold text-white mb-2">{t("imageTitle")}</h3>
-                                <div className="h-1 w-12 bg-primary/50 rounded-full mb-4" />
-                                <p className="text-sm font-medium text-primary/80 uppercase tracking-widest">{t("imageSubtitle")}</p>
-                            </div>
-
-                            {/* Decorative Grid */}
-                            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
+                    {/* The "Tile" - Clean Animation Only */}
+                    <FadeIn delay={0.2} className="relative h-full min-h-[500px] lg:min-h-[600px]">
+                        <div className="relative h-full w-full overflow-hidden flex items-center justify-center">
+                            {/* Animation Container */}
+                            <HeroAnimation
+                                className="w-full h-full flex items-center justify-center pointer-events-none"
+                                videoClassName="object-contain scale-[0.9] mix-blend-screen opacity-100 contrast-125 brightness-100"
+                                customMask="radial-gradient(circle, black 80%, transparent 100%)"
+                                noShine
+                            />
                         </div>
                     </FadeIn>
                 </div>

@@ -4,13 +4,13 @@ import { FadeIn } from "@/components/ui/FadeIn"
 import { Section } from "@/components/ui/Section"
 import { Search, Code2, Rocket, BarChart3 } from "lucide-react"
 import { useTranslations } from "next-intl"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useScroll } from "framer-motion"
 import { useRef } from "react"
 
 export function Process() {
     const t = useTranslations("Process");
     const containerRef = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({
+    const { } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     })

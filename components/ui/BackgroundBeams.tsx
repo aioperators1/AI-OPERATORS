@@ -16,6 +16,7 @@ export function BackgroundBeams() {
             delay: Math.random() * 5,
             duration: 3 + Math.random() * 5,
         }));
+        // eslint-disable-next-line
         setBeams(newBeams);
     }, []);
 

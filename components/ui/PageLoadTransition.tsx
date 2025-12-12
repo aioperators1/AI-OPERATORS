@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
+import Image from "next/image"
+
 export function PageLoadTransition() {
     const [isLoading, setIsLoading] = useState(true)
     const { theme, resolvedTheme } = useTheme()
@@ -11,6 +13,7 @@ export function PageLoadTransition() {
     const [percentage, setPercentage] = useState(0)
 
     useEffect(() => {
+        // eslint-disable-next-line
         setMounted(true)
 
         // Smoother, faster progress
@@ -60,10 +63,11 @@ export function PageLoadTransition() {
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             className="relative w-28 h-28 md:w-32 md:h-32"
                         >
-                            <img
+                            <Image
                                 src={logoSrc}
                                 alt="AI Operators"
-                                className="w-full h-full object-contain"
+                                fill
+                                className="object-contain"
                             />
                         </motion.div>
 

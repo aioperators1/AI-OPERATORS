@@ -43,7 +43,6 @@ export function LocaleSwitcher({ mode = "dropdown" }: LocaleSwitcherProps) {
         })
     }
 
-    const currentLang = languages.find(l => l.code === locale) || languages[0]
 
     if (mode === "list") {
         return (

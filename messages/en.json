@@ -298,5 +298,54 @@
         "title": "Page Not Found",
         "description": "Sorry, we couldn't find the page you're looking for.",
         "backToHome": "Return to Home"
+    },
+    "Privacy": {
+        "date": "Effective Date: December 01, 2024",
+        "title": "Privacy Policy",
+        "subtitle": "We value your privacy and are committed to protecting your personal data.",
+        "intro": "This Privacy Policy explains how AI Operators (\"we\", \"us\", or \"our\") collects, uses, and discloses your information when you use our website and AI services.",
+        "section1Title": "1. Information We Collect",
+        "section1Text": "We collect information that you provide directly to us, such as when you create an account, subscribe to our newsletter, or contact support. This may include:",
+        "section1List": {
+            "item1": "Contact information (name, email address, phone number)",
+            "item2": "Business information (company name, role, industry)",
+            "item3": "Payment information (processed securely by our payment providers)",
+            "item4": "Usage data (how you potentialy interact with our AI agents)"
+        },
+        "section2Title": "2. How We Use Your Information",
+        "section2Text": "We use the information we collect to:",
+        "section2List": {
+            "item1": "Provide, maintain, and improve our AI services",
+            "item2": "Process transactions and send related information",
+            "item3": "Send you technical notices, updates, and support messages",
+            "item4": "Respond to your comments and questions",
+            "item5": "Train our AI models (only using anonymized data where explicitly permitted)"
+        },
+        "section3Title": "3. Data Security",
+        "section3Text": "We implement enterprise-grade security measures to protect your personal information. All data is encrypted in transit and at rest. We do not sell your personal data to third parties.",
+        "section4Title": "4. Contact Us",
+        "section4Text": "If you have any questions about this Privacy Policy, please contact us at:"
+    },
+    "Terms": {
+        "date": "Last Updated: December 01, 2024",
+        "title": "Terms of Service",
+        "subtitle": "Please read these terms carefully before using our AI services.",
+        "intro": "By accessing or using AI Operators (\"Service\"), you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service.",
+        "section1Title": "1. Acceptable Use",
+        "section1Text": "You agree not to use the Service to:",
+        "section1List": {
+            "item1": "Generate harmful, fraudulent, or illegal content",
+            "item2": "Violate the privacy or rights of others",
+            "item3": "Reverse engineer the AI models or software",
+            "item4": "Send unsolicited marketing messages (Spam) via our WhatsApp integration"
+        },
+        "section2Title": "2. Intellectual Property",
+        "section2Text": "The Service and its original content (excluding content provided by you), features, and functionality are and will remain the exclusive property of AI Operators and its licensors.",
+        "section3Title": "3. Termination",
+        "section3Text": "We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.",
+        "section4Title": "4. Limitation of Liability",
+        "section4Text": "In no event shall AI Operators, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits.",
+        "section5Title": "5. Governing Law",
+        "section5Text": "These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which AI Operators operates, without regard to its conflict of law provisions."
     }
 }

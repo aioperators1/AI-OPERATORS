@@ -293,5 +293,43 @@
                 "user2": "Excellent. Planifiez une réunion de revue."
             }
         }
+    },
+    "Privacy": {
+        "title": "Politique de Confidentialité",
+        "description": "Nous accordons une grande importance à votre vie privée et nous nous engageons à protéger vos données personnelles.",
+        "lastUpdated": "Dernière mise à jour : 12 Décembre 2025",
+        "sections": {
+            "collection": {
+                "title": "Collecte de Données",
+                "content": "Nous collectons les informations que vous nous fournissez directement, y compris le nom, l'email et les détails du projet."
+            },
+            "usage": {
+                "title": "Utilisation des Données",
+                "content": "Nous utilisons vos données pour fournir et améliorer nos services d'IA, communiquer avec vous et nous conformer aux obligations légales."
+            },
+            "security": {
+                "title": "Sécurité",
+                "content": "Nous mettons en œuvre des mesures de sécurité de niveau entreprise pour protéger vos informations personnelles."
+            }
+        }
+    },
+    "Terms": {
+        "title": "Conditions d'Utilisation",
+        "description": "Veuillez lire attentivement ces conditions avant d'utiliser nos services d'IA.",
+        "lastUpdated": "Dernière mise à jour : 12 Décembre 2025",
+        "sections": {
+            "acceptance": {
+                "title": "Acceptation",
+                "content": "En accédant à nos services, vous acceptez d'être lié par ces conditions."
+            },
+            "services": {
+                "title": "Services IA",
+                "content": "Nos services d'IA sont fournis 'tels quels'. Nous ne garantissons pas une précision de 100% dans les résultats générés par l'IA."
+            },
+            "liability": {
+                "title": "Responsabilité",
+                "content": "AI Operators ne sera pas responsable des dommages indirects ou consécutifs résultant de l'utilisation de nos services."
+            }
+        }
     }
 }
